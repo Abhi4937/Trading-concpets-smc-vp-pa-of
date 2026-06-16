@@ -1,0 +1,15 @@
+# Secrets — never commit
+cookies.txt
+*cookies*.txt
+_cookies_raw.json
+_chrome_cookie_profile/
+
+# Temp / working dirs
+_vtt/
+_test/
+_cookietest/
+**/_vtt/
+
+# Python
+__pycache__/
+*.pyc

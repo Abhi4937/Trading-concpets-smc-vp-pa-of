@@ -1,0 +1,11 @@
+{
+  "out": "C:\\dev\\trading_concepts\\Photon Trading",
+  "cookies": "C:\\dev\\trading_concepts\\cookies.txt",
+  "skip_regex": "",
+  "playlists": [
+    ["01_BecomeProfitableTrader", "Become A Profitable Trader", "PL2gavhriz4HiqRLoUkuSssLQXr4OxZ_UY"],
+    ["02_MasterMarketStructure", "Master Market Structure", "PL2gavhriz4HhRm_bIY9j7zQKdTJg2oF9F"],
+    ["03_SupplyAndDemand", "Supply & Demand Trading", "PL2gavhriz4HgI8vAMoVoeuQpOljNFxMji"],
+    ["04_TradingPsychology", "Trading Psychology", "PL2gavhriz4HgljAmENdP9BUNqD_3KpjBB"]
+  ]
+}

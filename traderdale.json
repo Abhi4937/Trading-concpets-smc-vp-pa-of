@@ -1,0 +1,11 @@
+{
+  "out": "C:\\dev\\trading_concepts\\Trader Dale",
+  "cookies": "C:\\dev\\trading_concepts\\cookies.txt",
+  "skip_regex": "top volume profile levels to trade this week|trade of the week",
+  "playlists": [
+    ["01_VolumeProfile", "Volume Profile", "PLeqqhqnIoka901pxELjJu7xGBPPSBAN4Z"],
+    ["02_OrderFlow", "Order Flow", "PLeqqhqnIoka_-HXyzUYJHToxVzqZWoM-l"],
+    ["03_VWAP", "VWAP", "PLeqqhqnIoka_WHS4tz2S6bpHrJ9iHQEpY"],
+    ["04_PriceAction", "Price Action", "PLeqqhqnIoka8JCQcA0SGuXP98gek6Klhy"]
+  ]
+}
