@@ -236,6 +236,9 @@ A level is a price where the market has *already shown its hand* — where insti
 ![](charts/level-map.svg)
 *The seven level families on one Nifty chart — HTF order block and FVG, swing highs/lows, PDH/PDL/PDC, equal-high liquidity pools, and the volume-profile POC/HVN/LVN — each drawn from its native timeframe.*
 
+![](charts/level-map.real.png)
+*Live NIFTY1! 15m with the custom **Decision Engine Toolkit** indicator — the same idea on a real chart: only the freshest order block (demand), fair-value gap, and PDH/PDL/PDC are drawn, with BOS/CHoCH structure labels. Decluttered by design — the indicator keeps just the most-recent qualified zone per type, not every swing.*
+
 ### 5.1 Order block (OB)
 
 An order block is the **last opposing candle before a strong displacement move** — the last down-candle before a powerful rally (a bullish OB / demand), or the last up-candle before a sharp sell-off (a bearish OB / supply). The logic: that final candle is where the institution loaded its position before pushing price away, so when price returns, *unfilled orders sit there* and price often reacts.

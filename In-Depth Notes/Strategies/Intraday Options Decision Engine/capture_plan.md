@@ -12,11 +12,17 @@ this is the enrichment pass. Follow `In-Depth Notes/BLUEPRINT.md` §3 and `Strat
 bridge quirks verbatim. Use **NIFTY1!** (real volume/CVD) for any volume/footprint scene. Each capture is saved as
 `charts/<slug>.real.png` and embedded right after the matching `![](charts/<slug>.svg)`.
 
+> [!note] Indicator & Volume Profile status
+> The custom **Decision Engine Toolkit [Course]** Pine indicator is built and live on the chart (BOS/CHoCH,
+> fresh OB/FVG capped to the most-recent per type, PDH/PDL/PDC — decluttered). **Volume Profile (Fixed/Visible
+> Range) could not be added via the study API** (it is a premium TradingView feature / interactive tool) — add it
+> manually in the UI before the VP-dependent captures, or rely on the indicator's levels + the schematic VP.
+
 ## Scenarios
 
 | # | slug → `charts/<slug>.real.png` | Symbol · TF | Must show | Markings |
 |---|---|---|---|---|
-| 1 | `level-map` | NIFTY1! · 1h/15m | A real session with only the qualified levels | OB, one FVG, swing H/L, PDH/PDL, a liquidity pool, VP HVN/LVN/POC — **≤6 levels**, declutter rule visible |
+| 1 | `level-map` ✅ done | NIFTY1! · 15m | A real session with only the qualified levels | OB, one FVG, swing H/L, PDH/PDL, a liquidity pool, VP HVN/LVN/POC — **≤6 levels**, declutter rule visible — *captured `level-map.real.png` via the custom indicator* |
 | 2 | `at-level-fork` | NIFTY1! · 5m | Same level producing HOLD on one test and BREAK on another | reject wick vs conviction close; label HOLD/BREAK/WAIT |
 | 3 | `hammer-sweep-branch` | NIFTY1! · 5m/15m | A sweep+hammer at demand that **continued** AND (separate) one that **reversed** | sweep wick, hammer, the regime tag that decided it |
 | 4 | `wait-vs-retest` | NIFTY1! · 5m | A break, then the retest entry | first-touch (wide stop) vs retest (tight stop) with point distances |
