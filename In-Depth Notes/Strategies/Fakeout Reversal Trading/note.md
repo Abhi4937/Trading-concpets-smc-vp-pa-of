@@ -106,6 +106,9 @@ The fakeout reversal has a built-in R:R architecture that the breakout trade can
 ![](anim/lifecycle.anim.svg)
 *The fakeout-reversal lifecycle: up-drive → coil → sweep above (bull trap) → close back inside → CHoCH → failed retest → revert to the mean. The whole game: was the break ACCEPTED (real, stand aside) or REJECTED (failed, fade it)?*
 
+![](charts/lifecycle.real.png)
+*The same lifecycle on real Nifty futures (15m): a consolidation range (gold box) is swept on the upside, the break is rejected, and price reverses all the way down through the range to a Change-of-Character — the textbook sequence surviving contact with live price.*
+
 A fakeout reversal is not an event; it is a **sequence of eight stages**. Arriving late — at the moment the price snaps back — is the most common error. You must be reading the chart *before* the sweep so that you know the level, know the liquidity pool, and know what to watch for when the spike happens. The trader's job changes at every stage. Miss a stage, and you misread the next one.
 
 ### Stage 1 — Prior drive / context read
@@ -272,7 +275,10 @@ Long trade is the exact mirror: new 20-bar low, prior low ≥4 bars earlier; buy
 **India mapping on Nifty 15m:** the "20 bars" approximates the Opening Range / Initial Balance when the IB has formed multiple near-equal highs. The prior high must be at least 4 bars (60 minutes) old — meaning it was set in a prior session or at least an hour ago — to have concentrated enough stop liquidity. The pattern fires most cleanly against the 9:15–10:15 IB high or low, which has had the full first hour to accumulate stops.
 
 ![](charts/turtle-soup.svg)
-*Turtle Soup short: new 20-bar high sweeps a prior high that is ≥4 bars old, then closes back inside — the concentrated stop cluster is now the trapped-buyer fuel for the reversal.*
+*Turtle Soup (the long / mirror version shown here): a new 20-bar low sweeps a prior low that is ≥4 bars old, then closes back **above** it — buy the reclaim, stop one tick below the sweep. The short is the exact inverse (sell a swept 20-bar high, per the rules above).*
+
+![](charts/turtle-soup.real.png)
+*The long version on real Nifty futures (15m): price sweeps a prior swing low, closes back above it, and reverses up — the concentrated stop cluster below the low becomes the fuel for the rally.*
 
 ![](anim/turtle-soup.anim.svg)
 *Turtle Soup, stage by stage: equal highs build, stop cluster concentrates, the sweep fires all orders simultaneously, the reversal candle closes inside, sell-stop entry triggers below the prior high.*
@@ -291,6 +297,9 @@ Long trade is the exact mirror: new 20-bar low, prior low ≥4 bars earlier; buy
 
 ![](charts/sfp.svg)
 *SFP short: the wick takes out the prior swing high (triggering stops and breakout buys), but the candle closes back inside — that close is the sole entry gate. The wick is information; the close is the trade.*
+
+![](charts/sfp.real.png)
+*A clean SFP on real Nifty futures (15m): the wick takes out the prior swing high (gold level), the candle closes back below it, and price reverses down — the close-back-inside is the trade.*
 
 ### 5.3 Wyckoff Spring (Accumulation Phase C)
 

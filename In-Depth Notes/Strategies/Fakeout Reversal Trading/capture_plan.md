@@ -1,11 +1,17 @@
 ---
 title: "Capture Plan — real Nifty / Nifty-futures fakeout-reversal charts"
 type: capture-plan
-status: pending
+status: partial
 related: "[[note]]"
 ---
 
 # Capture Plan — real charts to layer onto the fakeout-reversal guide
+
+> [!done] Captured so far (2026-06-19, NIFTY1! 15m, "Decision Engine Toolkit [Course]" indicator)
+> - ✅ `lifecycle.real.png` — range swept on the upside, rejected, reversed down through the range to CHoCH (embedded in §2).
+> - ✅ `sfp.real.png` — prior swing high swept, candle closes back below, price reverses down (embedded in §5.2).
+> - ✅ `turtle-soup.real.png` — prior swing low swept, closes back above, reverses up (the long/mirror; embedded in §5.1).
+> - ⏳ Remaining slugs below stay **schematic-only** for now: `wyckoff-spring` and `sl-target-geometry` were captured but rejected in QA (the indicator's PDH/PDL zones cluttered the view); `orb-fakeout` was skipped (display-anchor issue). Re-capture these in a future pass with the chart decluttered to the bare custom indicator.
 
 You chose **schematic-first**: the guide ships now with clean SVG schematics + animations, and these real captures get marked up and embedded in a follow-up pass once TradingView Desktop is up with the supporting indicator(s) attached. Each real chart sits *next to* the matching schematic in `note.md` (the schematic is the guaranteed visual; the real chart is enrichment — same policy as [[Breakout Trading/capture_plan|the breakout capture plan]] and the video-notes blueprint).
 
