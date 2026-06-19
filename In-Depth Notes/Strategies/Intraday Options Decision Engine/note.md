@@ -459,6 +459,36 @@ The **Initial Balance (IB)** is the high and low of the **first hour** (9:15–1
 
 The IB high/low are simultaneously the day's **primary breakout levels** AND the **engineered liquidity pool** (equal-high/low where stops sit) — which is why the first break of the IB is so often a *sweep* first.
 
+### 10.1 The Opening-Range Breakout (ORB) — the IB break as a trade
+
+The **ORB** is the single most popular retail intraday template in India — and a useful *trigger*, but a **fragile edge on its own.** It is just the IB break, so it plugs straight into the engine: the opening-range high/low *is* a qualified level, and its break is read by the **HOLD / BREAK / WAIT** fork (§17–24), gated by regime (§16). (Full cited findings: [[research-orb|research-orb.md]] + [[research-orb-books|research-orb-books.md]].)
+
+> [!warning] The honest edge — ORB is selectivity, not the break itself
+> An adversarially-verified backtest (Zerodha, Jan 2022–Feb 2026, **Nifty weekly options**) put naive ORB **option-buying at ~48% win rate with ~45% max drawdown** — roughly a coin-flip with brutal drawdown. Option **selling** showed a marginally better win rate at only **~6% drawdown**. (Single proprietary source; a flashier "+91.6%" backtest was **refuted**.) **Conclusion: do not "buy every ORB break."** The edge comes from regime-gating, confluence, fakeout-awareness, and stop discipline — exactly what this engine adds on top.
+
+> [!warning] Web says "chase the break"; the books say "fade the trap" — the engine settles it
+> Broker/educator content says enter on the break. Your books (Trader Dale; ICT/SMC) say the **first IB break is usually a stop-hunt** — fade the failed break / trade the **retest** after 1–3 candles of acceptance. Both are right depending on **regime**: trend / negative-GEX day → the break extends (**BREAK** → breakout play); balance / positive-GEX day → the break is a sweep that reverts (**HOLD** → fakeout-reversal, §17–24). Read the regime *first*, then let the ORB break confirm the play you were already allowed to take.
+
+**The opening-range window (contested — no backtest-proven optimum):**
+
+| Window | Use | Note |
+|---|---|---|
+| **First 15 min (9:15–9:30)** | **Default** — filters noise, range not too wide | Practitioner consensus (Tradejini, Sahi, Tradersmastermind) |
+| **First 5 min** | Aggressive — earlier trend-day entry | **More false breakouts** |
+| **9:15–11:15 (2 hr)** | Fewer, cleaner option signals | Zerodha's options backtest favoured this (single source) |
+| **Books' frame** | 30-min for intraday context, 5-min to fine-tune entry | Dale (not an OR window) |
+
+Mark the OR on the **15m**; time the entry on the **5m** — the same funnel as the rest of the engine.
+
+**ORB rules (slot into the engine's machinery):**
+- **Entry:** break of OR high (CE) / OR low (PE), on a **5m candle CLOSE** beyond the range (cuts the opening whipsaw). The **retest** entry (price returns to the broken edge and holds) is the books' preferred, tighter-stop version — and it shrinks the option stop (§22).
+- **Stop:** **opposite end of the OR** (most common), or midpoint / **ATR-based** (~10–20% of daily ATR per the books) for a tighter stop. Convert to premium and keep it inside the per-instrument **stop budget (§33).**
+- **Target & R:R:** **1:1 to 2:1**, plus the range-width measured move, the next qualified level (PDH/PDL, HVN, naked POC, §34), and a **hard time-exit (~2:30 PM IST)**; a **one-trade-per-day** discipline is common.
+- **Confluence:** the same witnesses (§3) — break on the right side of **VWAP**, **volume expansion** on the break candle, fresh **OI** in the break direction, away from max-pain. ORB only supplies the *level*; the witnesses say whether to trust the break.
+
+> [!example] ORB → option (Nifty)
+> 9:15–9:30 OR = 24,460–24,510 (50-pt range). Trend/negative-GEX regime → breakout bias. A 5m candle **closes above 24,510** on expanding volume, price the right side of VWAP → buy the **ATM/near-ATM 24,500 CE** (delta ~0.45–0.55, so premium moves ~₹0.5 per index point — *never deep OTM*). **Stop:** index back below the OR / midpoint ~24,485 (≈25 pts → ~₹12–13 premium), or Zerodha's **20%-of-premium** rule. **Target:** measured move +50 pts (1:1) → next level (2:1), hard exit 2:30 PM. **Instrument note:** BankNifty OR is ~2–3× wider and **monthly-expiry only** now (no weekly gamma); Nifty weekly ORB on **Tuesday expiry** is theta-hostile late in the day (§35).
+
 ### Acceptance vs rejection on the way to the level
 
 As price travels toward one of your qualified levels, watch *how* it arrives:
@@ -1527,7 +1557,7 @@ Walk-forward the regime filter separately for expiry vs non-expiry days — the 
 ## Related notes & sources
 
 - **Companion deep-dives:** [[Breakout Trading/note|Breakout Trading]] · [[Fakeout Reversal Trading/note|Fakeout Reversal Trading]] — the full mechanics for two of the five plays.
-- **In this folder:** [[research|research.md]] (cited research backing this guide) · [[research-timeframes|research-timeframes.md]] (deep-research findings on timeframe selection — independently validates the 1h/30m→15m→5m stack, the 1–5min footprint/CVD trigger, and the India inferred-aggressor reality) · [[capture_plan|capture_plan.md]] (real-chart capture scenarios, deferred pass).
+- **In this folder:** [[research|research.md]] (cited research backing this guide) · [[research-timeframes|research-timeframes.md]] (deep-research on timeframe selection) · [[research-orb|research-orb.md]] + [[research-orb-books|research-orb-books.md]] (deep-research on the Opening Range Breakout — web + books, see §10.1) · [[capture_plan|capture_plan.md]] (real-chart capture scenarios, deferred pass).
 - **External practitioner sources (timeframe research):** NinjaTrader (footprint guide) · Bookmap (CVD) · TrueData (order-flow & CVD on 1/5/15-min, India) · NordFX (footprint/CVD) · Vtrender (Market Profile / NSE method) · WavesStrategy (Nifty VP+OI) · Zerodha Z-Connect · Business Standard · Outlook Business (SEBI 2024 derivatives rules).
 - **Repo references:** `options-flow-india.md`, `options-flow-and-dealer-greeks.md`, `order-flow-options-backtesting-india-reference.md`, `volume-footprint-and-data-feeds-india.md`, `COMPARISON.md`, `FREE_CURRICULUM.md`.
 - **Method syntheses:** `Fractal Flow Pro/CONCEPTS.md`, `Tom Vorwald/CONCEPTS.md`, `Trader Dale/CONCEPTS.md`, `Photon Trading/CONCEPTS.md`.
