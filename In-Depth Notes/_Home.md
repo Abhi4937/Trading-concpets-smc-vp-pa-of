@@ -14,6 +14,7 @@ Each video gets its own folder: `note.md` + `/frames` (real stills) + `/charts` 
 - [[Trader Dale]]
 - [[Photon Trading]]
 - [[Fractal Flow Pro]]
+- [[Chart Fanatics]]
 
 ## Strategies (standalone playbooks)
 End-to-end strategy guides synthesised across books + repo notes + web — not tied to one video.
@@ -33,6 +34,7 @@ Every lesson uses a **real TradingView chart chosen to fit that specific concept
 | 2026-06-19 | Fractal Flow Pro | [[04_TechnicalAnalysisVault/004 - 16 Ways of Anticipating Reversals/note\|16 Ways of Anticipating Reversals]] | ✅ reviewed — 16 methods · slide per method |
 | 2026-06-19 | Fractal Flow Pro | [[04_TechnicalAnalysisVault/002 - 20 Ways of CATCHING A PULLBACK/note\|20 Ways of Catching a Pullback]] | ✅ reviewed — 20 entry techniques |
 | 2026-06-19 | Fractal Flow Pro | [[04_TechnicalAnalysisVault/003 - 20 FAST Price Action Patterns/note\|20 FAST Price Action Patterns]] | ✅ reviewed — 20 few-bar patterns |
+| 2026-06-19 | Chart Fanatics | [[Chart Fanatics/001 - 74pct Win Rate OrderFlow Strategy/note\|74% Win-Rate Order-Flow Strategy]] | ✅ reviewed — order-flow scalping · 4 tools→2 models · 8 custom diagrams |
 | 2026-06-19 | Strategy | [[Strategies/Breakout Trading/note\|Breakout Trading — Complete Playbook]] | ✅ reviewed — ~16.4k words · 17 schematics + 5 animations + 1 real NIFTY1! chart · custom **Breakout Toolkit** indicator built · more real captures pending ([[Strategies/Breakout Trading/capture_plan]]) |
 | 2026-06-19 | Strategy | [[Strategies/Fakeout Reversal Trading/note\|Fakeout Reversal Trading — Failed-Breakout Playbook]] | ✅ reviewed — 32 sections · 21 schematics + 5 animations + 3 real Nifty charts (lifecycle/SFP/turtle-soup) · rest schematic-only (see capture_plan) |
-| 2026-06-19 | Strategy ⭐ | [[Strategies/Intraday Options Decision Engine/note\|Intraday Options Decision Engine — umbrella]] | ✅ reviewed — 39 sections · ~28.8k words · 29 schematics + 6 animations · custom **Decision Engine Toolkit** indicator built · 1 real NIFTY1! capture (more pending, see capture_plan) |
+| 2026-06-19 | Strategy ⭐ | [[Strategies/Intraday Options Decision Engine/note\|Intraday Options Decision Engine — umbrella]] | ✅ reviewed — 39 sections · ~29.3k words · 29 schematics + 6 animations · custom **Decision Engine Toolkit** indicator built · 2 real NIFTY1! captures · deep-research timeframe validation ([[Strategies/Intraday Options Decision Engine/research-timeframes\|research-timeframes]]) |

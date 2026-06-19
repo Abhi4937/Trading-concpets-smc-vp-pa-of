@@ -933,6 +933,9 @@ The **sweet spot** is the single 5m candle (occasionally the candle + its retest
 
 **Instrument note.** The *logic* is identical for BankNifty / FinNifty / Sensex; only the **point scale** changes — a "shallow retest" on Nifty might be 15–20 pts, but 40–60 pts on BankNifty and Sensex (they move ~2–3× Nifty; repo: research.md §8.4). Read the trigger by *structure* (close, wick, body), never by a fixed point count, then size the stop to the instrument's budget in §31.
 
+> [!note] External validation (deep-research, 2026) — the timeframe stack holds up
+> Independent practitioner sources confirm this exact shape. A **multi-timeframe top-down workflow** — a higher timeframe for structural levels/bias, a **short 1–5 minute** timeframe to time entries — is the consensus, and **footprint / CVD is read on 1–5 minute bars** ("a solid balance between signal quality and noise"), with **tick/1-min for scalping** and **5–15 min for swing-oriented day trades** (NinjaTrader; TrueData; Bookmap). The single actionable method they describe is literally *"look for CVD divergence at a known reference level — prior high/low, VWAP, a liquidity zone — then **wait for the reaction**"* (Bookmap) — which is exactly this engine's **read the level, then wait for the 5m trigger.** And Vtrender's NSE-specific playbook sequences it the same way the engine does — **Location (Market Profile) → Pressure (Gamma/GEX) → Intent (order flow)**, structure before signal. Full cited findings: [[research-timeframes|research-timeframes.md]].
+
 ---
 
 ## 26. Which lens to use when — price action vs SMC vs VP
@@ -990,6 +993,9 @@ This ranking is the single most important takeaway, because most footprint educa
 
 > [!warning] KEY FINDING — on Indian feeds, CVD divergence is the only fully trustworthy footprint read
 > NSE gives **no aggressor flag** on retail feeds. Every footprint you see is *inferred* — software guesses buy vs sell from the quote/tick rule, and gets a meaningful fraction wrong. Per-cell imbalances inherit that error directly. **CVD divergence survives** because it is a *shape over many bars*, where misclassification noise averages out, not a single-cell call (repo: research.md §6, §10). Practically: **trust the CVD-divergence shape; treat stacked imbalance as a helper; never bet on a single raw cell.**
+
+> [!note] External validation (deep-research, 2026) — the inferred-aggressor reality is real
+> Verified against the vendors' own disclosures: **TrueData states its footprint bid/ask split is *derived from the same standard market-data feed*** — i.e. inferred, with no separate trade-by-trade source — and verification **refuted** the marketing claims of genuine exchange-grade tick-by-tick data for Indian retail (a GoCharting "tick-by-tick" claim and a Vtrender "direct-from-NSE" claim were both killed 0–3). So this ranking is not caution for its own sake: **absolute footprint/imbalance values are inferred and error-prone; the CVD-divergence *shape* is the trustworthy read.** The common strong-imbalance heuristic is **≈3:1–4:1 (≥300%)**, but platform defaults vary (ATAS 150%, Exocharts 250%) — a convention, not a validated optimum. Full cited findings: [[research-timeframes|research-timeframes.md]].
 
 > [!warning] KEY FINDING — true footprint on the OPTION is impossible
 > There is **no usable tick data on individual option strikes** — thin strikes and wide spreads make any option footprint unreliable garbage. **Always run footprint/CVD on the Nifty (or BankNifty/Sensex) FUTURE**, then translate the futures read onto the option via delta (§31). You read order flow on the *underlying's future*; you *execute* on the option. Never the other way around (repo: research.md §7, §8.1).
@@ -1521,7 +1527,8 @@ Walk-forward the regime filter separately for expiry vs non-expiry days — the 
 ## Related notes & sources
 
 - **Companion deep-dives:** [[Breakout Trading/note|Breakout Trading]] · [[Fakeout Reversal Trading/note|Fakeout Reversal Trading]] — the full mechanics for two of the five plays.
-- **In this folder:** [[research|research.md]] (cited research backing this guide) · [[capture_plan|capture_plan.md]] (real-chart capture scenarios, deferred pass).
+- **In this folder:** [[research|research.md]] (cited research backing this guide) · [[research-timeframes|research-timeframes.md]] (deep-research findings on timeframe selection — independently validates the 1h/30m→15m→5m stack, the 1–5min footprint/CVD trigger, and the India inferred-aggressor reality) · [[capture_plan|capture_plan.md]] (real-chart capture scenarios, deferred pass).
+- **External practitioner sources (timeframe research):** NinjaTrader (footprint guide) · Bookmap (CVD) · TrueData (order-flow & CVD on 1/5/15-min, India) · NordFX (footprint/CVD) · Vtrender (Market Profile / NSE method) · WavesStrategy (Nifty VP+OI) · Zerodha Z-Connect · Business Standard · Outlook Business (SEBI 2024 derivatives rules).
 - **Repo references:** `options-flow-india.md`, `options-flow-and-dealer-greeks.md`, `order-flow-options-backtesting-india-reference.md`, `volume-footprint-and-data-feeds-india.md`, `COMPARISON.md`, `FREE_CURRICULUM.md`.
 - **Method syntheses:** `Fractal Flow Pro/CONCEPTS.md`, `Tom Vorwald/CONCEPTS.md`, `Trader Dale/CONCEPTS.md`, `Photon Trading/CONCEPTS.md`.
 - **Books:** McMillan *Options as a Strategic Investment* · Sinclair *Volatility Trading* · Passarelli *Trading Options Greeks* · Dalton *Mind Over Markets* · Coulling *Volume Price Analysis* · ICT/SMC · Tharp / Douglas (psychology).
