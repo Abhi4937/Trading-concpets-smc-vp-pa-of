@@ -1,0 +1,110 @@
+// Decision Engine Toolkit [Course] — custom TradingView indicator for the
+// Intraday Options Decision Engine guide. Decluttered by design: only the
+// freshest order block + FVG per side (keepN), BOS/CHoCH structure labels,
+// and PDH/PDL/PDC. Pair with Fixed/Visible Range Volume Profile.
+//
+// To use: TradingView -> Pine Editor -> paste -> "Add to chart".
+// Robust build: PDH/PDL/PDC computed via session change (no request.security
+// lookahead repaint warning); order blocks anchored with ATR + arithmetic bar
+// index (no variable-offset historical references that triggered the earlier
+// runtime error). Validated with pine_check (0 errors / 0 warnings).
+//@version=5
+indicator("Decision Engine Toolkit [Course]", overlay=true, max_boxes_count=20, max_lines_count=40, max_labels_count=20)
+
+gS = "Structure"
+showStruct = input.bool(true, "BOS / CHoCH labels", group=gS)
+pivLen     = input.int(5, "Swing pivot strength", minval=2, maxval=20, group=gS)
+gZ = "Zones"
+showFVG = input.bool(true, "Fair Value Gaps", group=gZ)
+showOB  = input.bool(true, "Order Blocks", group=gZ)
+keepN   = input.int(1, "Keep most-recent N per type", minval=1, maxval=5, group=gZ)
+zext    = input.int(25, "Zone extend (bars)", minval=5, maxval=200, group=gZ)
+showPD  = input.bool(true, "PDH / PDL / PDC", group="Levels")
+
+cBull = #089981
+cBear = #f23645
+cBlue = #2962ff
+cSub  = #787b86
+fBull = color.new(#089981, 78)
+fBear = color.new(#f23645, 78)
+fFVG  = color.new(#2962ff, 80)
+
+// ---- PDH/PDL/PDC via session change (no lookahead, no repaint icon) ----
+var float dH = na
+var float dL = na
+var float pdh = na
+var float pdl = na
+var float pdc = na
+newDay = ta.change(time("D")) != 0
+if newDay
+    pdh := dH
+    pdl := dL
+    pdc := close[1]
+    dH := high
+    dL := low
+else
+    dH := na(dH) ? high : math.max(dH, high)
+    dL := na(dL) ? low  : math.min(dL, low)
+plot(showPD ? pdh : na, "PDH", color=cSub, style=plot.style_stepline, linewidth=1)
+plot(showPD ? pdl : na, "PDL", color=cSub, style=plot.style_stepline, linewidth=1)
+plot(showPD ? pdc : na, "PDC", color=color.new(#787b86, 40), style=plot.style_stepline, linewidth=1)
+var label lH = na
+var label lL = na
+var label lC = na
+if showPD and barstate.islast and not na(pdh)
+    label.delete(lH)
+    label.delete(lL)
+    label.delete(lC)
+    lH := label.new(bar_index + 3, pdh, "PDH", style=label.style_label_left, color=color.new(cSub, 100), textcolor=cSub, size=size.small)
+    lL := label.new(bar_index + 3, pdl, "PDL", style=label.style_label_left, color=color.new(cSub, 100), textcolor=cSub, size=size.small)
+    lC := label.new(bar_index + 3, pdc, "PDC", style=label.style_label_left, color=color.new(cSub, 100), textcolor=color.new(cSub, 30), size=size.small)
+
+// ---- structure BOS/CHoCH ----
+ph = ta.pivothigh(pivLen, pivLen)
+pl = ta.pivotlow(pivLen, pivLen)
+var float sH = na
+var float sL = na
+var int trend = 0
+if not na(ph)
+    sH := ph
+if not na(pl)
+    sL := pl
+bosUp = showStruct and not na(sH) and close > sH and close[1] <= sH
+bosDn = showStruct and not na(sL) and close < sL and close[1] >= sL
+if bosUp
+    label.new(bar_index, high, trend < 0 ? "CHoCH" : "BOS", style=label.style_label_down, color=cBull, textcolor=color.white, size=size.small)
+    trend := 1
+    sH := na
+if bosDn
+    label.new(bar_index, low, trend > 0 ? "CHoCH" : "BOS", style=label.style_label_up, color=cBear, textcolor=color.white, size=size.small)
+    trend := -1
+    sL := na
+
+// ---- FVG (fixed [2] offsets) ----
+var box[] fU = array.new<box>()
+var box[] fD = array.new<box>()
+if showFVG and low > high[2]
+    b = box.new(bar_index - 2, low, bar_index + zext, high[2], border_color=cBlue, bgcolor=fFVG, border_width=2)
+    array.push(fU, b)
+    if array.size(fU) > keepN
+        box.delete(array.shift(fU))
+if showFVG and high < low[2]
+    b = box.new(bar_index - 2, low[2], bar_index + zext, high, border_color=cBlue, bgcolor=fFVG, border_width=2)
+    array.push(fD, b)
+    if array.size(fD) > keepN
+        box.delete(array.shift(fD))
+
+// ---- OB via ATR at confirmed pivots (no variable-offset series refs) ----
+atr = ta.atr(14)
+var box[] oD = array.new<box>()
+var box[] oS = array.new<box>()
+if showOB and not na(pl)
+    b = box.new(bar_index - pivLen, pl + atr * 0.6, bar_index + zext, pl, border_color=cBull, bgcolor=fBull, border_width=2)
+    array.push(oD, b)
+    if array.size(oD) > keepN
+        box.delete(array.shift(oD))
+if showOB and not na(ph)
+    b = box.new(bar_index - pivLen, ph, bar_index + zext, ph - atr * 0.6, border_color=cBear, bgcolor=fBear, border_width=2)
+    array.push(oS, b)
+    if array.size(oS) > keepN
+        box.delete(array.shift(oS))
