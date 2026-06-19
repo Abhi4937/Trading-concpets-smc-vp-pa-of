@@ -850,6 +850,9 @@ Now we resolve the full scenario the engine was built for. **Nifty makes a sessi
 ![](charts/grinding-up-case.svg)
 *The full path: session high (buy-side liquidity) → fall to demand → sweep + bullish reaction (the spring) → grind up → arrival at resistance, about to break. Plan A entered at the demand; Plan B waits at resistance.*
 
+![](charts/grinding-up-case.real.png)
+*Live NIFTY1! 15m: the same shape on a real chart — decline into a demand zone (the indicator's order block), a base/reclaim, then the grind back up into the volume-profile nodes on the right. The Decision Engine Toolkit + Visible Range Volume Profile, decluttered.*
+
 ![](anim/grinding-up-case.anim.svg)
 *Animated: the complete sequence plays through — the sweep at demand, the grind, and the two possible resolutions at resistance (clean break-and-go vs reject-back-into-range).*
 
