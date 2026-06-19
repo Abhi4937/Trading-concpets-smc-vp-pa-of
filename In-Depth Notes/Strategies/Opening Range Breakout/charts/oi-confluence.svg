@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 400" font-family="Segoe UI,Arial,sans-serif">
+<rect width="860" height="400" rx="12" fill="#131722"/>
+<text x="26" y="30" fill="#d1d4dc" font-size="19" font-weight="700">Options-OI Confluence with the ORB</text>
+<text x="26" y="49" fill="#787b86" font-size="12.5">Read fresh OI vs OI re-defense vs distance from max-pain to confirm or fade the break</text>
+<rect x="26.0" y="88.0" width="808.0" height="58.0" rx="8" fill="#1a2230" stroke="#1b2230" stroke-width="1"/>
+<rect x="26.0" y="88.0" width="6" height="58.0" rx="3" fill="#089981"/>
+<text x="44.0" y="112.0" fill="#d1d4dc" font-size="12.5" font-weight="700">Fresh OI in break direction</text>
+<text x="820.0" y="112.0" fill="#089981" font-size="12" font-weight="700" text-anchor="end">CONFIRM</text>
+<text x="44.0" y="130.0" fill="#787b86" font-size="10.5">Long buildup on an up-break (call OI builds at the next strike) = fresh money backs</text>
+<text x="44.0" y="143.5" fill="#787b86" font-size="10.5">the move.</text>
+<rect x="26.0" y="156.0" width="808.0" height="58.0" rx="8" fill="#1a2230" stroke="#1b2230" stroke-width="1"/>
+<rect x="26.0" y="156.0" width="6" height="58.0" rx="3" fill="#f23645"/>
+<text x="44.0" y="180.0" fill="#d1d4dc" font-size="12.5" font-weight="700">OI re-defense at the strike</text>
+<text x="820.0" y="180.0" fill="#f23645" font-size="12" font-weight="700" text-anchor="end">FADE</text>
+<text x="44.0" y="198.0" fill="#787b86" font-size="10.5">Writers add OI at the broken strike (re-defending it) = the break is being sold into</text>
+<text x="44.0" y="211.5" fill="#787b86" font-size="10.5">→ fade risk.</text>
+<rect x="26.0" y="224.0" width="808.0" height="58.0" rx="8" fill="#1a2230" stroke="#1b2230" stroke-width="1"/>
+<rect x="26.0" y="224.0" width="6" height="58.0" rx="3" fill="#089981"/>
+<text x="44.0" y="248.0" fill="#d1d4dc" font-size="12.5" font-weight="700">Break away from max-pain</text>
+<text x="820.0" y="248.0" fill="#089981" font-size="12" font-weight="700" text-anchor="end">REAL</text>
+<text x="44.0" y="266.0" fill="#787b86" font-size="10.5">Price pulling AWAY from max pain = real directional pressure, not a pin. Supports</text>
+<text x="44.0" y="279.5" fill="#787b86" font-size="10.5">the break.</text>
+<rect x="26.0" y="292.0" width="808.0" height="58.0" rx="8" fill="#1a2230" stroke="#1b2230" stroke-width="1"/>
+<rect x="26.0" y="292.0" width="6" height="58.0" rx="3" fill="#f0b90b"/>
+<text x="44.0" y="316.0" fill="#d1d4dc" font-size="12.5" font-weight="700">Break INTO a heavy-OI wall</text>
+<text x="820.0" y="316.0" fill="#f0b90b" font-size="12" font-weight="700" text-anchor="end">CAUTION</text>
+<text x="44.0" y="334.0" fill="#787b86" font-size="10.5">Breaking straight into a large opposing OI strike = expect a stall / rejection at</text>
+<text x="44.0" y="347.5" fill="#787b86" font-size="10.5">the wall.</text>
+<text x="430.0" y="388" fill="#787b86" font-size="11.5" text-anchor="middle">The chart shows the break; the option chain tells you whether fresh money agrees with it.</text>
+</svg>
