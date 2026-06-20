@@ -77,9 +77,7 @@ A targeted pass ran **3 adversarial fetch-and-check votes per headline claim** a
 - Binance: **0.3%** liquidation fee → insurance fund → ADL
 - NY DFS: **Barclays $150M** last-look
 - SEC: Reg NMS (eff. 2005, Access-fee cap **$0.003/sh**); Nasdaq price-time + 260 MMs; NYSE DMMs **17%** (2019)
-
-**⚠️ Widely reported but NOT re-confirmed in this pass (source page bot-gated — verify before quoting):**
-- SEBI FY24 **prop +₹33,000cr / FPI +₹28,000cr / individuals −₹61,000cr**, and **96%/97% of pro profits from algos** (figures live in the SEBI annexure/PDF our verifiers couldn't fetch). Used in [[01 — The Market Food Chain]], [[05 — Hedge Funds, Prop Firms & HFT]], [[22 — How the Industry Profits from Retail Losses]] with this caveat.
+- SEBI FY24 **prop +₹33,000cr / FPI +₹28,000cr / individuals −₹61,000cr**, and **96%/97% of pro profits from algos** — ⚠️→✅ **closed** by fetching the official SEBI annexure PDF directly (`sebi_data/attachdocs/sep-2024/1727086965496.pdf`) via Firecrawl; every figure confirmed verbatim (the HTML wrapper that blocked the verifiers is bot-gated, the PDF is not).
 
 **🔧 Corrected during verification:**
 - The "transaction costs = ~28% of net losses for active loss-makers" figure was **re-attributed** from the Sep-2024 release (where it does not appear) to the **SEBI Jan-2023 study** (where it does).

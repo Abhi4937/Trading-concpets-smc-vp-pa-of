@@ -37,7 +37,7 @@ In forex/CFD, the broker is often your **counterparty** — your loss is its **r
 Leverage generates **interest revenue** for the broker AND **forces liquidations** that transfer your capital to whoever's on the other side. In crypto, exchanges run **liquidation engines** that charge a fee (Binance: **0.3%** into an insurance fund) and force-close you (✅ Binance). Recipients: **brokers/exchanges (interest + liq fees) + counterparties.** → [[09 — Leverage, Margin & Prime Brokers]]
 
 ### ⑤ The speed/algo edge → HFT, prop, FPIs
-The pros simply out-trade you. SEBI's FY24 data is widely reported as: **prop traders + FPIs booked ~₹33,000cr + ~₹28,000cr gross profit while individuals lost >₹61,000cr**, with **~96% of prop and ~97% of FPI profits from algorithms**. ⚠️ **Verification caveat:** these specific FY24 figures could **not** be confirmed against the SEBI source page in our verification pass (the page body is bot-gated; figures live in the linked annexure/PDF) — treat as *widely-reported but not independently re-confirmed here*. The *direction* (pro profits ≈ retail losses, won by speed and code) is sound. Recipients: **prop firms, hedge funds, FPIs.** → [[05 — Hedge Funds, Prop Firms & HFT]]
+The pros simply out-trade you. SEBI FY24: **proprietary traders + FPIs booked gross profits of ₹33,000cr + ₹28,000cr while individuals & others lost >₹61,000cr** (before costs), and **96% of proprietary-trader profits and 97% of FPI profits came from algorithmic trading** (✅ SEBI Sep-2024, confirmed verbatim from the official annexure PDF). This is the most direct number: pro profits ≈ retail losses, won by speed and code. Recipients: **prop firms, hedge funds, FPIs.** → [[05 — Hedge Funds, Prop Firms & HFT]]
 
 ## 3. The money-flow diagram
 ```
