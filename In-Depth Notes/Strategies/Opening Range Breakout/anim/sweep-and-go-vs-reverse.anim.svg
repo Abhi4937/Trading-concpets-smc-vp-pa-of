@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" font-family="Segoe UI,Arial,sans-serif">
+<rect width="860" height="460" rx="12" fill="#131722"/>
+<line x1="26" y1="58" x2="834" y2="58" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="98" x2="834" y2="98" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="138" x2="834" y2="138" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="178" x2="834" y2="178" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="218" x2="834" y2="218" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="258" x2="834" y2="258" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="298" x2="834" y2="298" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="338" x2="834" y2="338" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="378" x2="834" y2="378" stroke="#1b2230" stroke-width="1"/>
+<text x="26" y="28" fill="#d1d4dc" font-size="19" font-weight="700">OR-High Sweep: Go vs Reverse</text>
+<text x="26" y="47" fill="#787b86" font-size="12.5">The fork — a sweep of the OR high either CONTINUES up (go) or closes back in and REVERSES down</text>
+<line x1="77.4" y1="301.7" x2="77.4" y2="359.0" stroke="#b2b5be" stroke-width="1.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.00s" dur="0.30s" fill="freeze"/></line>
+<rect x="64.4" y="316.0" width="26.0" height="28.7" rx="1.5" fill="#089981" stroke="#089981" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.00s" dur="0.30s" fill="freeze"/></rect>
+<line x1="150.9" y1="287.3" x2="150.9" y2="373.3" stroke="#b2b5be" stroke-width="1.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.18s" dur="0.30s" fill="freeze"/></line>
+<rect x="137.9" y="316.0" width="26.0" height="43.0" rx="1.5" fill="#f23645" stroke="#f23645" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.18s" dur="0.30s" fill="freeze"/></rect>
+<line x1="224.3" y1="287.3" x2="224.3" y2="373.3" stroke="#b2b5be" stroke-width="1.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.36s" dur="0.30s" fill="freeze"/></line>
+<rect x="211.3" y="301.7" width="26.0" height="57.3" rx="1.5" fill="#089981" stroke="#089981" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.36s" dur="0.30s" fill="freeze"/></rect>
+<line x1="297.8" y1="273.0" x2="297.8" y2="344.7" stroke="#b2b5be" stroke-width="1.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.54s" dur="0.30s" fill="freeze"/></line>
+<rect x="284.8" y="301.7" width="26.0" height="28.7" rx="1.5" fill="#f23645" stroke="#f23645" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.54s" dur="0.30s" fill="freeze"/></rect>
+<line x1="371.2" y1="273.0" x2="371.2" y2="344.7" stroke="#b2b5be" stroke-width="1.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.72s" dur="0.30s" fill="freeze"/></line>
+<rect x="358.2" y="287.3" width="26.0" height="43.0" rx="1.5" fill="#089981" stroke="#089981" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.72s" dur="0.30s" fill="freeze"/></rect>
+<line x1="444.7" y1="258.7" x2="444.7" y2="316.0" stroke="#b2b5be" stroke-width="1.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.90s" dur="0.30s" fill="freeze"/></line>
+<rect x="431.7" y="287.3" width="26.0" height="14.3" rx="1.5" fill="#f23645" stroke="#f23645" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="0.90s" dur="0.30s" fill="freeze"/></rect>
+<line x1="518.1" y1="230.0" x2="518.1" y2="316.0" stroke="#b2b5be" stroke-width="1.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.08s" dur="0.30s" fill="freeze"/></line>
+<rect x="505.1" y="273.0" width="26.0" height="28.7" rx="1.5" fill="#089981" stroke="#089981" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.08s" dur="0.30s" fill="freeze"/></rect>
+<line x1="591.6" y1="201.3" x2="591.6" y2="287.3" stroke="#b2b5be" stroke-width="1.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.26s" dur="0.30s" fill="freeze"/></line>
+<rect x="578.6" y="215.7" width="26.0" height="57.3" rx="1.5" fill="#089981" stroke="#089981" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.26s" dur="0.30s" fill="freeze"/></rect>
+<line x1="665.1" y1="144.0" x2="665.1" y2="230.0" stroke="#b2b5be" stroke-width="1.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.44s" dur="0.30s" fill="freeze"/></line>
+<rect x="652.1" y="158.3" width="26.0" height="57.3" rx="1.5" fill="#089981" stroke="#089981" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.44s" dur="0.30s" fill="freeze"/></rect>
+<line x1="738.5" y1="86.7" x2="738.5" y2="172.7" stroke="#b2b5be" stroke-width="1.5" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.62s" dur="0.30s" fill="freeze"/></line>
+<rect x="725.5" y="101.0" width="26.0" height="57.3" rx="1.5" fill="#089981" stroke="#089981" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="1.62s" dur="0.30s" fill="freeze"/></rect>
+<rect x="51.4" y="287.3" width="272.4" height="86.0" fill="rgba(240,185,15,0.12)" stroke="#787b86" stroke-width="1.1" stroke-dasharray="4 3" opacity="0" rx="2"><animate attributeName="opacity" from="0" to="1" begin="2.00s" dur="0.4s" fill="freeze"/></rect>
+<text x="56.4" y="301.3" fill="#787b86" font-size="11" font-weight="600" opacity="0">Opening Range<animate attributeName="opacity" from="0" to="1" begin="2.00s" dur="0.4s" fill="freeze"/></text>
+<line x1="26.0" y1="287.3" x2="834.0" y2="287.3" stroke="#f0b90b" stroke-width="1.6" stroke-dasharray="True" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.00s" dur="0.4s" fill="freeze"/></line>
+<text x="29.0" y="282.3" fill="#f0b90b" font-size="11" font-weight="600" text-anchor="start" opacity="0">OR high (swept)<animate attributeName="opacity" from="0" to="1" begin="2.00s" dur="0.4s" fill="freeze"/></text>
+<path d="M518.1,244.3 L518.1,287.3" stroke="#f23645" stroke-width="2" fill="none" stroke-dasharray="" marker-end="url(#bar_f23645)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.20s" dur="0.4s" fill="freeze"/></path>
+<text x="518.1" y="257.8" fill="#f23645" font-size="10.5" font-weight="600" text-anchor="middle" opacity="0">sweep the OR high<animate attributeName="opacity" from="0" to="1" begin="2.20s" dur="0.4s" fill="freeze"/></text>
+<path d="M621.0,230.0 L738.5,115.3" stroke="#089981" stroke-width="2.6" fill="none" stroke-dasharray="" marker-end="url(#bar_089981)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.50s" dur="0.4s" fill="freeze"/></path>
+<text x="679.7" y="164.7" fill="#089981" font-size="10.5" font-weight="600" text-anchor="middle" opacity="0">GO: reclaims &amp; continues<animate attributeName="opacity" from="0" to="1" begin="2.50s" dur="0.4s" fill="freeze"/></text>
+<path d="M591.6,273.0 L665.1,359.0" stroke="#f23645" stroke-width="2.2" fill="none" stroke-dasharray="5 4" marker-end="url(#bar_f23645)" opacity="0"><animate attributeName="opacity" from="0" to="1" begin="2.60s" dur="0.4s" fill="freeze"/></path>
+<text x="628.3" y="330.0" fill="#f23645" font-size="10.5" font-weight="600" text-anchor="middle" opacity="0">REVERSE: closes back in → fade<animate attributeName="opacity" from="0" to="1" begin="2.60s" dur="0.4s" fill="freeze"/></text>
+<defs>
+<marker id="bar_f23645" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#f23645"/></marker>
+<marker id="bar_089981" markerWidth="9" markerHeight="9" refX="6" refY="4.5" orient="auto"><path d="M0,0 L9,4.5 L0,9 z" fill="#089981"/></marker>
+</defs>
+<text x="430.0" y="377.9" fill="#787b86" font-size="10.5" font-weight="500" text-anchor="middle" opacity="0">reclaim &amp; hold above OR-high = go long; close back inside the OR = the sweep failed → short<animate attributeName="opacity" from="0" to="1" begin="2.00s" dur="0.4s" fill="freeze"/></text>
+<text x="430.0" y="446" fill="#787b86" font-size="12" text-anchor="middle">A sweep is only a long once it RECLAIMS; a sweep that closes back inside the OR is the short signal.</text>
+</svg>

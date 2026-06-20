@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 460" font-family="Segoe UI,Arial,sans-serif">
+<rect width="860" height="460" rx="12" fill="#131722"/>
+<line x1="26" y1="58" x2="674" y2="58" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="98" x2="674" y2="98" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="138" x2="674" y2="138" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="178" x2="674" y2="178" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="218" x2="674" y2="218" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="258" x2="674" y2="258" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="298" x2="674" y2="298" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="338" x2="674" y2="338" stroke="#1b2230" stroke-width="1"/>
+<line x1="26" y1="378" x2="674" y2="378" stroke="#1b2230" stroke-width="1"/>
+<text x="26" y="28" fill="#d1d4dc" font-size="19" font-weight="700">ORB Stop &amp; Target Geometry</text>
+<text x="26" y="47" fill="#787b86" font-size="12.5">SL at opposite OR end (ATR / OR-midpoint alternatives); T1 = measured move (OR width); T2 = next level</text>
+<rect x="334.0" y="287.3" width="101.8" height="28.7" fill="rgba(8,153,129,0.13)" stroke="#089981" stroke-width="1.1" stroke-dasharray="" opacity="1" rx="2"></rect>
+<text x="339.0" y="301.3" fill="#089981" font-size="11" font-weight="600" opacity="1">retest entry</text>
+<line x1="26.0" y1="316.0" x2="674.0" y2="316.0" stroke="#f0b90b" stroke-width="1.6" stroke-dasharray="True" opacity="1"></line>
+<text x="29.0" y="311.0" fill="#f0b90b" font-size="11" font-weight="600" text-anchor="start" opacity="1">OR high (break level)</text>
+<line x1="26.0" y1="373.3" x2="674.0" y2="373.3" stroke="#f23645" stroke-width="1.6" stroke-dasharray="True" opacity="1"></line>
+<text x="29.0" y="368.3" fill="#f23645" font-size="11" font-weight="600" text-anchor="start" opacity="1">OR low → SL anchor (or ATR / OR-mid)</text>
+<line x1="26.0" y1="258.7" x2="298.2" y2="258.7" stroke="#089981" stroke-width="1.6" stroke-dasharray="True" opacity="1"></line>
+<text x="29.0" y="253.7" fill="#089981" font-size="11" font-weight="600" text-anchor="start" opacity="1">T1 = measured move</text>
+<line x1="26.0" y1="144.0" x2="298.2" y2="144.0" stroke="#26c6da" stroke-width="1.6" stroke-dasharray="True" opacity="1"></line>
+<text x="29.0" y="139.0" fill="#26c6da" font-size="11" font-weight="600" text-anchor="start" opacity="1">T2 = next level / PDH</text>
+<text x="220.4" y="92.4" fill="#787b86" font-size="10.5" font-weight="500" text-anchor="start" opacity="1">measured move = OR width (54−48 = 6) projected up</text>
+<line x1="60.9" y1="325.6" x2="60.9" y2="363.8" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="47.9" y="335.1" width="26.0" height="19.1" rx="1.5" fill="#089981" stroke="#089981" opacity="1"></rect>
+<line x1="110.7" y1="316.0" x2="110.7" y2="373.3" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="97.7" y="335.1" width="26.0" height="28.7" rx="1.5" fill="#f23645" stroke="#f23645" opacity="1"></rect>
+<line x1="160.6" y1="316.0" x2="160.6" y2="373.3" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="147.6" y="325.6" width="26.0" height="38.2" rx="1.5" fill="#089981" stroke="#089981" opacity="1"></rect>
+<line x1="210.4" y1="306.4" x2="210.4" y2="354.2" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="197.4" y="325.6" width="26.0" height="19.1" rx="1.5" fill="#f23645" stroke="#f23645" opacity="1"></rect>
+<line x1="260.3" y1="306.4" x2="260.3" y2="354.2" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="247.3" y="316.0" width="26.0" height="28.7" rx="1.5" fill="#089981" stroke="#089981" opacity="1"></rect>
+<line x1="310.1" y1="239.6" x2="310.1" y2="325.6" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="297.1" y="249.1" width="26.0" height="66.9" rx="1.5" fill="#089981" stroke="#089981" opacity="1"></rect>
+<line x1="360.0" y1="230.0" x2="360.0" y2="268.2" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="347.0" y="249.1" width="26.0" height="9.6" rx="1.5" fill="#f23645" stroke="#f23645" opacity="1"></rect>
+<line x1="409.8" y1="239.6" x2="409.8" y2="296.9" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="396.8" y="258.7" width="26.0" height="28.7" rx="1.5" fill="#f23645" stroke="#f23645" opacity="1"></rect>
+<line x1="459.7" y1="258.7" x2="459.7" y2="306.4" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="446.7" y="268.2" width="26.0" height="19.1" rx="1.5" fill="#089981" stroke="#089981" opacity="1"></rect>
+<line x1="509.5" y1="210.9" x2="509.5" y2="277.8" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="496.5" y="220.4" width="26.0" height="47.8" rx="1.5" fill="#089981" stroke="#089981" opacity="1"></rect>
+<line x1="559.4" y1="172.7" x2="559.4" y2="230.0" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="546.4" y="182.2" width="26.0" height="38.2" rx="1.5" fill="#089981" stroke="#089981" opacity="1"></rect>
+<line x1="609.2" y1="134.4" x2="609.2" y2="191.8" stroke="#b2b5be" stroke-width="1.5" opacity="1"></line>
+<rect x="596.2" y="144.0" width="26.0" height="38.2" rx="1.5" fill="#089981" stroke="#089981" opacity="1"></rect>
+<line x1="694.0" y1="316.0" x2="752.0" y2="316.0" stroke="#2962ff" stroke-width="2"/>
+<text x="756.0" y="320.0" fill="#2962ff" font-size="10.5" font-weight="700">Entry</text>
+<line x1="694.0" y1="373.3" x2="752.0" y2="373.3" stroke="#f23645" stroke-width="2"/>
+<text x="756.0" y="377.3" fill="#f23645" font-size="10.5" font-weight="700">SL</text>
+<line x1="694.0" y1="258.7" x2="752.0" y2="258.7" stroke="#089981" stroke-width="2"/>
+<text x="756.0" y="262.7" fill="#089981" font-size="10.5" font-weight="500">T1 (1.0R)</text>
+<line x1="694.0" y1="144.0" x2="752.0" y2="144.0" stroke="#089981" stroke-width="2"/>
+<text x="756.0" y="148.0" fill="#089981" font-size="10.5" font-weight="500">T2 (3.0R)</text>
+<line x1="694.0" y1="86.7" x2="752.0" y2="86.7" stroke="#089981" stroke-width="2"/>
+<text x="756.0" y="90.7" fill="#089981" font-size="10.5" font-weight="500">T3 trail (4.0R)</text>
+<rect x="694.0" y="316.0" width="56" height="57.3" fill="rgba(242,54,69,0.13)"/>
+<rect x="694.0" y="258.7" width="56" height="57.3" fill="rgba(8,153,129,0.13)"/>
+<text x="430.0" y="446" fill="#787b86" font-size="12" text-anchor="middle">Risk to the opposite OR end (where the idea is wrong); first target = the OR width itself.</text>
+</svg>
