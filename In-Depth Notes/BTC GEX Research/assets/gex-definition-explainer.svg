@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="660" viewBox="0 0 980 660" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="980" height="660" fill="#0f1420"/>
+  <text x="490" y="44" text-anchor="middle" font-size="27" font-weight="700" fill="#eaf0ff">What GEX measures — open-interest-weighted total gamma</text>
+  <text x="490" y="72" text-anchor="middle" font-size="15" fill="#8fa3c7">"how much aggregate market delta changes per $1 move — i.e. how much dealers must hedge"</text>
+
+  <!-- STEP 1 -->
+  <text x="60" y="118" font-size="17" font-weight="700" fill="#7fd1ff">STEP 1 — each option's gamma = delta change per $1</text>
+  <!-- table -->
+  <g font-size="14.5">
+    <rect x="60" y="132" width="560" height="34" fill="#1b2336"/>
+    <text x="78" y="154" fill="#cdd9f0" font-weight="700">Option</text>
+    <text x="300" y="154" fill="#cdd9f0" font-weight="700">Γ (Δ per $1)</text>
+    <text x="440" y="154" fill="#cdd9f0" font-weight="700">OI</text>
+    <text x="560" y="154" fill="#cdd9f0" font-weight="700" text-anchor="end">Γ × OI</text>
+
+    <rect x="60" y="166" width="560" height="32" fill="#141b2b"/>
+    <text x="78" y="187" fill="#9fe6b0">$64,000 call</text>
+    <text x="300" y="187" fill="#dfe7f5">0.00006</text>
+    <text x="440" y="187" fill="#dfe7f5">800</text>
+    <text x="560" y="187" fill="#9fe6b0" text-anchor="end" font-weight="700">0.048</text>
+
+    <rect x="60" y="198" width="560" height="32" fill="#141b2b"/>
+    <text x="78" y="219" fill="#9fe6b0">$66,000 call</text>
+    <text x="300" y="219" fill="#dfe7f5">0.00004</text>
+    <text x="440" y="219" fill="#dfe7f5">1,100</text>
+    <text x="560" y="219" fill="#9fe6b0" text-anchor="end" font-weight="700">0.044</text>
+
+    <rect x="60" y="230" width="560" height="32" fill="#141b2b"/>
+    <text x="78" y="251" fill="#ff9ea6">$62,000 put</text>
+    <text x="300" y="251" fill="#dfe7f5">0.00005</text>
+    <text x="440" y="251" fill="#dfe7f5">900</text>
+    <text x="560" y="251" fill="#ff9ea6" text-anchor="end" font-weight="700">0.045</text>
+  </g>
+  <text x="60" y="290" font-size="13.5" fill="#8fa3c7">Γ is biggest at-the-money; OI weights each strike by how many contracts actually exist.</text>
+
+  <!-- STEP 2 -->
+  <text x="60" y="332" font-size="17" font-weight="700" fill="#7fd1ff">STEP 2 — sum Γ × OI across EVERY option = total OI-weighted gamma</text>
+  <rect x="60" y="346" width="560" height="46" rx="6" fill="#16233a" stroke="#2f4a73"/>
+  <text x="78" y="375" font-size="17" fill="#eaf0ff">0.048 + 0.044 + 0.045 =</text>
+  <text x="600" y="375" font-size="20" font-weight="700" fill="#ffd56b" text-anchor="end">0.137 BTC per $1</text>
+
+  <!-- STEP 3 -->
+  <text x="60" y="436" font-size="17" font-weight="700" fill="#7fd1ff">STEP 3 — that is the forced dealer hedge per move</text>
+
+  <!-- arrow flow -->
+  <g font-size="15">
+    <rect x="60" y="452" width="190" height="70" rx="8" fill="#13233b" stroke="#2f4a73"/>
+    <text x="155" y="482" text-anchor="middle" fill="#9fd9ff" font-weight="700">BTC moves</text>
+    <text x="155" y="506" text-anchor="middle" fill="#eaf0ff" font-size="19" font-weight="700">+ $1,000</text>
+
+    <text x="270" y="495" font-size="26" fill="#ffd56b">→</text>
+
+    <rect x="300" y="452" width="270" height="70" rx="8" fill="#13233b" stroke="#2f4a73"/>
+    <text x="435" y="478" text-anchor="middle" fill="#9fd9ff" font-weight="700">market option-delta shifts</text>
+    <text x="435" y="505" text-anchor="middle" fill="#eaf0ff" font-size="19" font-weight="700">0.137 × 1,000 = +137 BTC</text>
+
+    <text x="590" y="495" font-size="26" fill="#ffd56b">→</text>
+
+    <rect x="620" y="452" width="300" height="70" rx="8" fill="#1d2b1f" stroke="#3f6a45"/>
+    <text x="770" y="478" text-anchor="middle" fill="#9fe6b0" font-weight="700">dealers re-hedge (stay neutral)</text>
+    <text x="770" y="505" text-anchor="middle" fill="#eaf0ff" font-size="19" font-weight="700">trade ≈ 137 BTC</text>
+  </g>
+
+  <!-- bottom note: sign -> regime -->
+  <rect x="60" y="548" width="860" height="86" rx="8" fill="#191a12" stroke="#5a5326"/>
+  <text x="78" y="576" font-size="15" font-weight="700" fill="#ffd56b">Add the sign convention → NET GEX → the regime</text>
+  <text x="78" y="600" font-size="14" fill="#d9dec6">calls count +, puts count −.  NET &gt; 0 = dealers long gamma → buy dips / sell rips → price PINS (low vol).</text>
+  <text x="78" y="622" font-size="14" fill="#d9dec6">NET &lt; 0 = dealers short gamma → sell dips / buy rips → moves AMPLIFY (trend). GEX = size + direction of that forced flow.</text>
+</svg>

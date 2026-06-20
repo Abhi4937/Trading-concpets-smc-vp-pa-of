@@ -15,6 +15,9 @@ status: verified-claims
 ## 1. The one-sentence definition
 **GEX = the open-interest-weighted total gamma across every listed option** — it quantifies **how much aggregate market delta changes per $1 (or 1%) move in BTC**, i.e. *how much options dealers are forced to hedge as price moves.* (CryptoGamma, verified 3-0)
 
+![The definition in three steps — each option's gamma × OI, summed across the chain, equals the forced dealer hedge per move](assets/gex-definition-explainer.png)
+*The definition visualized: (1) each option's Γ = delta change per $1, OI-weighted → (2) summed across every option = total OI-weighted gamma (0.137 BTC per $1 in this mini-chain) → (3) that is exactly the size dealers must trade to re-hedge. Add the sign convention (calls +, puts −) to get **net GEX** and the regime.*
+
 > [!example] Plain-English example of the definition
 > Suppose across all BTC options the aggregate gamma says: *"for every $1 BTC moves up, the whole market's delta increases by 5 BTC."* If dealers are **net short** that gamma, then a $1 rise just made them **5 BTC too short** — they must **buy 5 BTC** to get back to neutral. GEX is the number that tells you that hedging size and which way it points.
 
