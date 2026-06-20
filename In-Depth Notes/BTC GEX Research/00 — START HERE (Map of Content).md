@@ -32,6 +32,7 @@ status: living-document
 | 09 | [[09 — Worked Examples and Annotated Charts (all scenarios)]] | Every definition as an annotated chart + numbers + the 10 scenarios walked end-to-end |
 
 ### 🔬 Per-tool deep-dives (`Tool Deep-Dives/`) — math, APIs, functions, end-to-end
+> The four hosted dashboards now include **annotated live-UI walkthroughs** (real screenshots captured 2026-06-20): every panel/chart explained — what it is, how to read it, the logic, assumptions, and limitations. Laevitas (4 charts), CryptoGamma (metrics + heatmap + vol/flow/risk), GammaFlip (marker taxonomy), GEX Terminal Pro (live terminal).
 - [[Tool Deep-Dives/CryptoGamma]] · [[Tool Deep-Dives/GammaFlip.io]] · [[Tool Deep-Dives/GEX Terminal Pro]] · [[Tool Deep-Dives/Laevitas]]
 - [[Tool Deep-Dives/Glassnode Gamma Exposure]] · [[Tool Deep-Dives/Amberdata AD Derivatives]]
 - [[Tool Deep-Dives/Nathan-Hall Bitcoin-Options-GEX]] · [[Tool Deep-Dives/dankbit]] · [[Tool Deep-Dives/zrack gex-terminal]]
