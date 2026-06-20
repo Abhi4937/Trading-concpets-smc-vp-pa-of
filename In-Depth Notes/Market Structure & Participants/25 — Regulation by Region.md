@@ -21,8 +21,8 @@ Two principal market regulators, split by product:
 ### CFTC — futures and derivatives
 - Governs futures, swaps, and listed derivatives; enforces **anti-spoofing** authority created by **Dodd-Frank §747** (which made spoofing — bidding/offering with intent to cancel before execution — a specific statutory violation).
 - **Landmark enforcement:**
-  - **JPMorgan — $920.2 million** to the CFTC in **2020** for spoofing in precious-metals and Treasury futures: **the largest monetary relief ever imposed by the CFTC** (📄 CFTC Release 8260-20).
-  - **Navinder Sarao** — ordered to pay **>$38 million** for **E-mini S&P 500 spoofing** tied to the **2010 Flash Crash** (📄 CFTC Release 7486-16).
+  - **JPMorgan — $920.2 million** to the CFTC in **2020** for spoofing in precious-metals and Treasury futures: **the largest monetary relief ever imposed by the CFTC** (✅ CFTC Release 8260-20).
+  - **Navinder Sarao** — ordered to pay **>$38 million** for **E-mini S&P 500 spoofing** tied to the **2010 Flash Crash** (✅ CFTC Release 7486-16).
 
 ---
 
@@ -35,7 +35,7 @@ Regulated by the **FCA** (UK) and **ESMA** (EU), which converged on aggressive *
 - **Mandatory standardized risk warnings** on CFD marketing.
 - **Ban on binary options** for retail clients.
 
-These measures were grounded in ESMA's own data: **74–89% of retail CFD accounts lose money**, with average losses reported in the range of **€1,600–€29,000** per client depending on the venue (📄 ESMA product-intervention measures). The restriction is explicitly about the *structure* of these products harming retail — directly connected to the B-book conflict described in [[24 — Order Lifecycle]] and [[22 — How the Industry Profits from Retail Losses]].
+These measures were grounded in ESMA's own data: **74–89% of retail CFD accounts lose money**, with average losses reported in the range of **€1,600–€29,000** per client depending on the venue (✅ ESMA product-intervention measures). The restriction is explicitly about the *structure* of these products harming retail — directly connected to the B-book conflict described in [[24 — Order Lifecycle]] and [[22 — How the Industry Profits from Retail Losses]].
 
 ---
 
@@ -43,7 +43,7 @@ These measures were grounded in ESMA's own data: **74–89% of retail CFD accoun
 
 Regulated by **SEBI** (Securities and Exchange Board of India), notable for **measuring and publishing retail loss data** and acting on it:
 
-- **F&O loss study (Sept 2024):** SEBI published that **~93% of individual F&O traders lost money** over the studied period (📄 SEBI Sep-2024 study).
+- **F&O loss study (Sept 2024):** SEBI published that **~93% of individual F&O traders lost money** over the studied period (✅ SEBI Sep-2024 study).
 - **NSE co-location scandal:** SEBI investigated and acted on preferential exchange data/access at NSE's co-location facility (an early-tick-feed advantage for some members).
 - **Market reforms (2024):** **rationalized weekly expiries** (limiting the number of expiry days), **raised contract lot sizes** (raising the minimum ticket to deter undercapitalized retail), and introduced **finfluencer regulations** restricting unregistered investment advice.
 
@@ -78,13 +78,13 @@ SEBI's posture is the clearest example of a regulator using documented retail-lo
 
 ## Sources
 
-- https://www.cftc.gov/PressRoom/PressReleases/8260-20 (CFTC — JPMorgan $920.2M resolution; largest CFTC monetary relief) — 📄 sourced
-- https://www.cftc.gov/PressRoom/PressReleases/7486-16 (CFTC — Navinder Sarao spoofing, E-mini / Flash Crash, >$38M) — 📄 sourced
+- https://www.cftc.gov/PressRoom/PressReleases/8260-20 (CFTC — JPMorgan $920.2M resolution; largest CFTC monetary relief) — ✅ verified
+- https://www.cftc.gov/PressRoom/PressReleases/7486-16 (CFTC — Navinder Sarao spoofing, E-mini / Flash Crash, >$38M) — ✅ verified
 - https://www.finra.org/rules-guidance/rulebooks/finra-rules/5310 (FINRA Rule 5310 — Best Execution and Interpositioning) — ✅ verified
-- https://www.esma.europa.eu/press-news/esma-news/esma-agrees-prohibit-binary-options-and-restrict-cfds-retail-investors (ESMA — CFD/binary-options product-intervention measures; retail loss rates) — 📄 sourced
+- https://www.esma.europa.eu/press-news/esma-news/esma-agrees-prohibit-binary-options-and-restrict-cfds-protect-retail-investors (ESMA — CFD/binary-options product-intervention measures; retail loss rates) — ✅ verified
 - https://www.sebi.gov.in/media-and-notifications/press-releases (SEBI — F&O individual-trader loss study, Sep 2024; ~93% lose) — 📄 sourced
 - https://finance.ec.europa.eu/digital-finance/crypto-assets_en (European Commission — MiCA, Markets in Crypto-Assets Regulation) — 📄 sourced
-- https://www.sec.gov/rules/final/34-51808.pdf (SEC — Regulation NMS final rule) — 📄 sourced
+- https://www.sec.gov/files/rules/final/34-51808.pdf (SEC — Regulation NMS final rule) — ✅ verified
 
 ## See also
 - [[24 — Order Lifecycle]]

@@ -35,13 +35,13 @@ A **CEX** runs an off-chain matching engine over a central limit order book; dep
 - **Withdrawal fees** (CEX).
 
 ## Derivatives mechanics (CEX)
-**Perpetual futures** with no expiry use a **funding rate** to tether the perp to spot. A **liquidation engine** closes under-margined positions; Binance charges a **0.3% liquidation fee** that feeds an **insurance fund**, and if that fund is insufficient, **auto-deleveraging (ADL)** claws profit from opposing positions (📄 Binance).
+**Perpetual futures** with no expiry use a **funding rate** to tether the perp to spot. A **liquidation engine** closes under-margined positions; Binance charges a **0.3% liquidation fee** that feeds an **insurance fund**, and if that fund is insufficient, **auto-deleveraging (ADL)** claws profit from opposing positions (✅ Binance).
 
 ## Regulation
 Fragmented and jurisdiction-dependent. Regulated venues (Coinbase, Gemini) face securities/AML oversight and show normal trading patterns; many offshore venues operate with minimal supervision.
 
 ## Limitations / controversies
-- **Wash trading**: on unregulated exchanges it averages **>70% of reported volume (median 79.1%)** across 29 exchanges — roughly **$4.5T of fake spot volume in Q1 2020 alone**; regulated venues show **<3%** of spot (📄 NBER w30783). Reported volume is largely fiction.
+- **Wash trading**: on unregulated exchanges it averages **>70% of reported volume (median 79.1%)** across 29 exchanges — roughly **$4.5T of fake spot volume in Q1 2020 alone**; regulated venues show **<3%** of spot (✅ NBER w30783). Reported volume is largely fiction.
 - **Custody/conflict stack**: a CEX as custodian + MM + prop desk + clearer is the structural setup behind multiple collapses.
 - **DEX trade-offs**: MEV/front-running, impermanent loss, and slippage on the constant-product curve for large orders.
 

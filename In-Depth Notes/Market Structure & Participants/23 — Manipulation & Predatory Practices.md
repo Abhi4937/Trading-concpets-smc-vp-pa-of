@@ -17,17 +17,17 @@ status: core-synthesis
 
 ### Spoofing & layering
 Placing large orders you **intend to cancel** to fake supply/demand and move price, then trading the other way.
-- **JPMorgan paid $920.2M to the CFTC (Sep 2020)** for spoofing in metals & Treasuries futures — the **largest CFTC monetary relief ever**; spanned 2008–2016, hundreds of thousands of spoof orders (📄 CFTC 8260-20).
-- **Navinder Sarao** ordered to pay **>$38M** ($25.7M penalty + $12.9M disgorgement) for "dynamic layering" — 4–6 huge fake sell orders in E-mini S&P futures; on **6 May 2010 (the Flash Crash)** his program ran 4h25m, modified orders **81,000+ times**, exerting $170–200M of downward pressure (📄 CFTC 7486-16).
+- **JPMorgan paid $920.2M to the CFTC (Sep 2020)** for spoofing in metals & Treasuries futures — the **largest CFTC monetary relief ever**; spanned 2008–2016, hundreds of thousands of spoof orders (✅ CFTC 8260-20).
+- **Navinder Sarao** ordered to pay **>$38M** ($25.7M penalty + $12.9M disgorgement) for "dynamic layering" — 4–6 huge fake sell orders in E-mini S&P futures; on **6 May 2010 (the Flash Crash)** his program ran 4h25m, exerting $170–200M of downward pressure (✅ CFTC 7486-16).
 > Spoofing is a **federal crime** under Dodd-Frank §747. It's done by *some* large/HFT players, not by your broker against your single order.
 
 ### Wash trading (fake volume)
 Trading with yourself to fabricate volume/interest.
-- On **unregulated crypto exchanges**, wash trading averages **>70% of reported volume (median 79.1%)** across 29 exchanges — ~**$4.5 trillion** of fake spot volume in **Q1 2020 alone**; regulated exchanges (Coinbase, Gemini…) show normal patterns and **<3%** of spot (📄 NBER w30783). → [[20 — Crypto Exchanges (CEX vs DEX-AMM)]]
+- On **unregulated crypto exchanges**, wash trading averages **>70% of reported volume (median 79.1%)** across 29 exchanges — ~**$4.5 trillion** of fake spot volume in **Q1 2020 alone**; regulated exchanges (Coinbase, Gemini…) show normal patterns and **<3%** of spot (✅ NBER w30783). → [[20 — Crypto Exchanges (CEX vs DEX-AMM)]]
 
 ### Forex "last look"
 A liquidity provider/broker accepts your order, then **rejects it** if the price moved against them in the milliseconds after — a free option against the client.
-- **Barclays paid $150M to the NY DFS (2015)** for last-look abuse — rejecting client trades for the bank's benefit (📄 NYDFS). → [[16 — Forex participants]], [[21 — Forex & the OTC interbank market]]
+- **Barclays paid $150M to the NY DFS (2015)** for last-look abuse — rejecting client trades for the bank's benefit (✅ NYDFS). → [[16 — Forex participants]], [[21 — Forex & the OTC interbank market]]
 
 ### Other prosecuted practices
 Quote stuffing (flooding the book to slow rivals), front-running (trading ahead of a known client order), and insider trading — all illegal and enforced.

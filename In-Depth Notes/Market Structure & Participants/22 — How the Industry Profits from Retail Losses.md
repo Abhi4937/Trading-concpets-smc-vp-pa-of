@@ -16,28 +16,28 @@ status: core-synthesis
 ## 1. The base rate — retail loses, systematically
 | Fact | Source |
 |------|--------|
-| **93%** of >1 crore Indian individual F&O traders **lost money** FY22–FY24; aggregate losses **>₹1.8 lakh crore**; only **1%** made >₹1 lakh after costs | 📄 SEBI (sep-2024) |
-| In FY22, **89%** of individual F&O traders lost (avg ₹1.1 lakh); only **11%** profited | 📄 SEBI (jan-2023) |
-| **74–89%** of retail **CFD** accounts lose money (avg loss €1,600–€29,000) | 📄 ESMA |
+| **93%** of >1 crore Indian individual F&O traders **lost money** FY22–FY24; aggregate losses **>₹1.8 lakh crore**; only **1%** made >₹1 lakh after costs | ✅ SEBI (sep-2024) |
+| In FY22, **89%** of individual F&O traders lost (avg ₹1.1 lakh); only **11%** profited | ✅ SEBI (jan-2023) |
+| **74–89%** of retail **CFD** accounts lose money (avg loss €1,600–€29,000) | ✅ ESMA |
 
 This is not a run of bad luck — it's the steady-state output of the machine below.
 
 ## 2. The five extraction mechanisms (where your money goes)
 
 ### ① Transaction costs (the silent killer)
-Every trade pays spread + commission + taxes/fees. SEBI: Indian F&O traders paid **~₹50,000cr** in transaction costs over 3 years (51% brokerage, 20% exchange fees); for active loss-makers, costs were **~28% of their net losses**; even *winners* spent **15–50% of profits** on costs (📄 SEBI). **Costs scale with frequency** — which is why the industry encourages activity. Recipients: **brokers, exchanges, the government (taxes).**
+Every trade pays spread + commission + taxes/fees. SEBI: Indian F&O traders paid **~₹50,000cr** in transaction costs over 3 years (51% brokerage, 20% exchange fees) (✅ SEBI sep-2024, confirmed verbatim from the study PDF). The earlier FY22 study found **active loss-makers' transaction costs equalled ~28% of their net trading losses**, and even *winners* spent **15–50% of profits** on costs (✅ SEBI jan-2023 — note: this 28% figure is from the Jan-2023 study, not the Sep-2024 release). **Costs scale with frequency** — which is why the industry encourages activity. Recipients: **brokers, exchanges, the government (taxes).**
 
 ### ② The spread → market makers (via PFOF)
-Your order is **sold** to a wholesaler who fills it and keeps the spread. Because retail flow is **uninformed**, it carries low adverse-selection risk → near-riskless profit for the wholesaler (📄 SEC DERA). Concentration: **3 wholesalers = 70–82% of stock PFOF, 73–90% of options PFOF**; Citadel + Virtu = **60–70%** of all retail flow 2017-21 (📄 SEC DERA). The broker is paid for handing you over; the wholesaler profits from the spread. Recipients: **wholesalers + your broker.** → [[11 — Wholesalers, Internalizers & PFOF]]
+Your order is **sold** to a wholesaler who fills it and keeps the spread. Because retail flow is **uninformed**, it carries low adverse-selection risk → near-riskless profit for the wholesaler. Concentration: **3 wholesalers = 70–82% of stock PFOF, 73–90% of options PFOF**; Citadel + Virtu = **60–70%** of all retail flow 2017-21 (✅ reported in the SEC DERA 2025 working paper, which cites Bryzgalova et al. 2023 & Hu & Murphy 2024). The broker is paid for handing you over; the wholesaler profits from the spread. Recipients: **wholesalers + your broker.** → [[11 — Wholesalers, Internalizers & PFOF]]
 
 ### ③ The other side of the trade → B-book brokers
 In forex/CFD, the broker is often your **counterparty** — your loss is its **revenue**. Industry: *"the majority of a broker's revenue comes from its B-book functionality"* (📄 Finance Magnates). With 74–89% of CFD clients losing, internalizing those losses is the business. Recipient: **your broker.** → [[08 — Brokers — the business model & conflicts]]
 
 ### ④ Leverage & financing → brokers + the liquidation cascade
-Leverage generates **interest revenue** for the broker AND **forces liquidations** that transfer your capital to whoever's on the other side. In crypto, exchanges run **liquidation engines** that charge a fee (Binance: **0.3%** into an insurance fund) and force-close you (📄 Binance). Recipients: **brokers/exchanges (interest + liq fees) + counterparties.** → [[09 — Leverage, Margin & Prime Brokers]]
+Leverage generates **interest revenue** for the broker AND **forces liquidations** that transfer your capital to whoever's on the other side. In crypto, exchanges run **liquidation engines** that charge a fee (Binance: **0.3%** into an insurance fund) and force-close you (✅ Binance). Recipients: **brokers/exchanges (interest + liq fees) + counterparties.** → [[09 — Leverage, Margin & Prime Brokers]]
 
 ### ⑤ The speed/algo edge → HFT, prop, FPIs
-The pros simply out-trade you. SEBI FY24: **prop traders + FPIs booked ₹33,000cr + ₹28,000cr gross profit while individuals lost >₹61,000cr** — and **96% of prop and 97% of FPI profits came from algorithms** (📄 SEBI). This is the most direct number: pro profits ≈ retail losses, won by speed and code. Recipients: **prop firms, hedge funds, FPIs.** → [[05 — Hedge Funds, Prop Firms & HFT]]
+The pros simply out-trade you. SEBI's FY24 data is widely reported as: **prop traders + FPIs booked ~₹33,000cr + ~₹28,000cr gross profit while individuals lost >₹61,000cr**, with **~96% of prop and ~97% of FPI profits from algorithms**. ⚠️ **Verification caveat:** these specific FY24 figures could **not** be confirmed against the SEBI source page in our verification pass (the page body is bot-gated; figures live in the linked annexure/PDF) — treat as *widely-reported but not independently re-confirmed here*. The *direction* (pro profits ≈ retail losses, won by speed and code) is sound. Recipients: **prop firms, hedge funds, FPIs.** → [[05 — Hedge Funds, Prop Firms & HFT]]
 
 ## 3. The money-flow diagram
 ```

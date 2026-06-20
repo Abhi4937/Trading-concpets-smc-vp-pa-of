@@ -38,10 +38,10 @@ status: foundation
 ```
 
 ## Who profits from whom (the money flow)
-- **Retail** pays: spreads, commissions, financing/leverage interest, and — in B-book forex/CFD — their *losses* directly. 📄 SEBI: **93%** of Indian F&O traders lose.
+- **Retail** pays: spreads, commissions, financing/leverage interest, and — in B-book forex/CFD — their *losses* directly. ✅ SEBI: **93%** of Indian F&O traders lose (FY22–24).
 - **Brokers** earn: commissions, **payment for order flow** (selling your order), margin interest, and (B-book) being your counterparty. → [[08 — Brokers — the business model & conflicts]]
 - **Wholesalers / market makers** earn: the **spread** on uninformed retail flow they bought via PFOF. 3 firms handle **70–90%** of US retail flow. → [[11 — Wholesalers, Internalizers & PFOF]]
-- **HFT / prop / institutions** earn: speed, scale, and algos. 📄 SEBI FY24: prop+FPI made ₹33,000cr+₹28,000cr while individuals lost >₹61,000cr — **96–97% of those pro profits came from algorithms.** → [[05 — Hedge Funds, Prop Firms & HFT]]
+- **HFT / prop / institutions** earn: speed, scale, and algos. ⚠️ SEBI FY24 (widely reported, *not re-confirmed in our verification pass* — source page bot-gated): prop+FPI made ~₹33,000cr+~₹28,000cr while individuals lost >₹61,000cr, ~96–97% of those pro profits from algorithms. → [[05 — Hedge Funds, Prop Firms & HFT]]
 - **Exchanges & clearing houses** earn: transaction fees, **market data**, colocation, listing fees, clearing fees — they profit from *volume*, win or lose. → [[18 — NYSE & Nasdaq (US equities)]]
 - **Investment banks** earn: underwriting/advisory fees, trading spreads, information. → [[07 — Investment Banks (sell-side)]]
 - **Finfluencers / IBs** earn: bounties from brokers per trader they recruit — whether you win or lose. → [[12 — Finfluencers, IBs & Affiliates]]

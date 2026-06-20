@@ -15,8 +15,10 @@ status: living-document
 >
 > Built from **3 adversarially-verified deep-research passes** over **regulatory/primary
 > sources** (SEC, CFTC, ESMA, SEBI, DTCC, NSE, NBER, OCC, LCH). Every number is cited.
-> Where a research pass's verification was cut short by a session limit, the claim is
-> marked **📄 sourced** (primary citation, not yet 3-vote-verified) vs **✅ verified**.
+> A dedicated **verification pass** (2026-06-21) re-checked the headline claims against
+> their primary sources: **✅ verified** = confirmed against the source; **⚠️** = widely
+> reported but not confirmable in our pass (source bot-gated); **📄 sourced** = primary
+> citation, not separately re-verified. See **§ Verification status** at the bottom.
 
 ---
 
@@ -57,3 +59,27 @@ status: living-document
 5. **Manipulation is real but specific.** Spoofing, wash trading, and last-look are *documented and prosecuted* (JPMorgan $920.2M; Sarao/Flash Crash). The vague "my broker hunts my stops" story is mostly **structure + your own leverage**, not a conspiracy — see [[23 — Manipulation & Predatory Practices]].
 
 > **The point of this vault:** understand the machine so you stop being the part it eats.
+
+---
+
+## ✅ Verification status (re-checked 2026-06-21)
+A targeted pass ran **3 adversarial fetch-and-check votes per headline claim** against the primary source.
+
+**✅ Confirmed (source substantiates the figures):**
+- SEBI Jan-2023: 89% of FY22 F&O traders lost / 11% profited
+- SEBI Sep-2024: **93%** lost FY22–24, >₹1.8L cr aggregate, 1% made >₹1L (confirmed verbatim from the study PDF)
+- SEBI Sep-2024: ~₹50,000cr transaction costs (51% brokerage / 20% exchange)
+- ESMA: **74–89%** of retail CFD accounts lose (€1,600–€29,000 avg)
+- PFOF: **$3.8B** (2021), Robinhood **$974M**; wholesaler shares Citadel **41%** / Virtu **26%** / G1 **16%** (CRS IF12594)
+- SEC-DERA: 3 wholesalers = 70–82% stock / 73–90% options PFOF; Citadel+Virtu 60–70% (paper *cites* Bryzgalova 2023 & Hu & Murphy 2024)
+- CFTC: **JPMorgan $920.2M** spoofing; **Sarao >$38M** (Flash Crash)
+- NBER: crypto wash trading **79.1% median**, ~$4.5T fake spot Q1-2020, regulated <3%
+- Binance: **0.3%** liquidation fee → insurance fund → ADL
+- NY DFS: **Barclays $150M** last-look
+- SEC: Reg NMS (eff. 2005, Access-fee cap **$0.003/sh**); Nasdaq price-time + 260 MMs; NYSE DMMs **17%** (2019)
+
+**⚠️ Widely reported but NOT re-confirmed in this pass (source page bot-gated — verify before quoting):**
+- SEBI FY24 **prop +₹33,000cr / FPI +₹28,000cr / individuals −₹61,000cr**, and **96%/97% of pro profits from algos** (figures live in the SEBI annexure/PDF our verifiers couldn't fetch). Used in [[01 — The Market Food Chain]], [[05 — Hedge Funds, Prop Firms & HFT]], [[22 — How the Industry Profits from Retail Losses]] with this caveat.
+
+**🔧 Corrected during verification:**
+- The "transaction costs = ~28% of net losses for active loss-makers" figure was **re-attributed** from the Sep-2024 release (where it does not appear) to the **SEBI Jan-2023 study** (where it does).

@@ -29,7 +29,7 @@ The gatekeeper between you and the market — retail can't access exchanges dire
 ## 2. How brokers make money (every revenue line)
 1. **Commissions / fees** — per trade or per contract.
 2. **The spread** — the gap between buy and sell; even "zero-commission" brokers earn here.
-3. **Payment for order flow (PFOF)** — they **sell your order** to a wholesaler who fills it and pays the broker a rebate. The 12 largest US brokerages earned **$3.8B** in PFOF in 2021; **Robinhood made $974M** from it — ~half its revenue (📄 Congress CRS IF12594). Deep-dive: [[11 — Wholesalers, Internalizers & PFOF]].
+3. **Payment for order flow (PFOF)** — they **sell your order** to a wholesaler who fills it and pays the broker a rebate. The 12 largest US brokerages earned **$3.8B** in PFOF in 2021; **Robinhood made $974M** from it — ~half its revenue (✅ Congress CRS IF12594, confirmed verbatim via the official CRS mirror). Deep-dive: [[11 — Wholesalers, Internalizers & PFOF]].
 4. **Margin & leverage interest** — lending you money to trade is high-margin revenue (and a liquidation engine — [[09 — Leverage, Margin & Prime Brokers]]).
 5. **B-book client losses** — in forex/CFD, internalized losing trades are pure profit.
 6. **Financing / swap / overnight fees**, withdrawal fees, data fees, FX conversion.
