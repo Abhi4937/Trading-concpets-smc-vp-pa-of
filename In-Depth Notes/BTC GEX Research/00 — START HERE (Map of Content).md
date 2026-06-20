@@ -29,6 +29,7 @@ status: living-document
 | 06 | [[06 — Build Your Own GEX Engine (architecture)]] | Full architecture from real OSS source; adapters, engine, math |
 | 07 | [[07 — Trader Usage Playbook (how to use together)]] | The combined daily workflow, levels → trades |
 | 08 | [[08 — Pitfalls and Misconceptions (what NOT to do)]] | The traps that blow up GEX-based trades |
+| 09 | [[09 — Worked Examples and Annotated Charts (all scenarios)]] | Every definition as an annotated chart + numbers + the 10 scenarios walked end-to-end |
 
 ### 🔬 Per-tool deep-dives (`Tool Deep-Dives/`) — math, APIs, functions, end-to-end
 - [[Tool Deep-Dives/CryptoGamma]] · [[Tool Deep-Dives/GammaFlip.io]] · [[Tool Deep-Dives/GEX Terminal Pro]] · [[Tool Deep-Dives/Laevitas]]

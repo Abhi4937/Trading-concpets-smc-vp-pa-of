@@ -32,6 +32,14 @@ def bs_gamma(S, K, t, r, sigma):
 ```
 > You can also just **read Γ from Deribit's `greeks.gamma`** instead of computing it (that's what Bitcoin-Options-GEX does). Computing it yourself lets you build a **gamma profile across a spot grid** (needed for the zero-gamma curve).
 
+> [!example] Worked numbers — compute Γ for one BTC option
+> Inputs: S=$63,300, K=$64,000, t=7 days = 0.0192 yr, σ=72% (0.72), r=0.
+> - `d1 = [ln(63300/64000) + (0 + 0.5·0.72²)·0.0192] / (0.72·√0.0192)`
+> - `   = [ln(0.98906) + 0.004977] / (0.72·0.1386)` = `[−0.01100 + 0.004977] / 0.09980` = **−0.0604**
+> - `N'(d1) = (1/√2π)·e^(−0.0604²/2)` = `0.39894 · 0.99818` = **0.39822**
+> - `Γ = 0.39822 / (63300 · 0.72 · 0.1386)` = `0.39822 / 6317.6` = **6.30 × 10⁻⁵** per $1
+> Reading: this option's delta changes ~**0.0000630 per $1**, i.e. ~**0.063 delta per $1,000** BTC move. Gamma is largest **at-the-money** and shrinks as you go far ITM/OTM — that's why the gamma wall clusters near heavily-traded near-the-money strikes.
+
 ## 2. From Γ to **dollar gamma** (two conventions — don't mix them)
 | Convention | Formula | Used by | Meaning |
 |------------|---------|---------|---------|
@@ -80,6 +88,23 @@ $$ \text{Net GEX} = \sum \text{Call GEX} - \sum \text{Put GEX}\ \text{(all strik
 | **Taker-flow** | dealer = **mirror of the taker** on each Deribit trade | **Glassnode** | best public method for crypto |
 | Aggressor-matched | quote→trade aggressor inference | Amberdata | best (paid, self-asserted) |
 > Crypto's advantage over equities: **Deribit exposes the taker per trade**, so taker-flow (Glassnode) beats the borrowed equity assumption. → [[Tool Deep-Dives/Glassnode Gamma Exposure]]
+
+### 3c. Full worked example — a 5-strike BTC mini-chain (naive model)
+Take a toy chain at spot **S = $63,300**, contract size 1, using `GEX = Γ · OI · S² · 0.01` (per-1%-move, calls +, puts −). Γ peaks ATM:
+
+| Strike | side | OI | Γ (×10⁻⁵) | dollar-gamma `Γ·S²·0.01` | sign | **strike GEX ($)** |
+|--------|------|----|-----------|--------------------------|------|--------------------|
+| 61,000 | put  | 900 | 4.1 | 1,643 | − | **−1,478,700** |
+| 62,000 | put  | 600 | 5.6 | 2,244 | − | **−1,346,400** |
+| 63,000 | call | 500 | 6.4 | 2,564 | + | **+1,282,000** |
+| 64,000 | call | 800 | 6.3 | 2,524 | + | **+2,019,200** |
+| 66,000 | call | 1,100 | 3.9 | 1,562 | + | **+1,718,200** |
+
+- **Net GEX** = −1,478,700 − 1,346,400 + 1,282,000 + 2,019,200 + 1,718,200 = **+2,194,300** → net **positive/long-gamma** book → pinning bias.
+- **Gamma wall** = max |strike GEX| = **$64,000** (+2.02M) → the dominant magnet.
+- **Call wall** = max positive = **$64,000**; **Put wall** = max negative = **$61,000**.
+- **Zero-gamma** = where the running sum crosses 0. Cumulative from the bottom: −1.48M, −2.83M, −1.54M, **+0.47M** (crosses between $63,000 and $64,000). Linear-interpolate: `63000 + 1.54M/(1.54M+0.47M)·1000 ≈ ` **$63,766**.
+> Read-out: with spot $63,300 **below** zero-gamma $63,766, *this slice* is locally short-gamma (trend-prone) even though the **whole book** is net positive — which is exactly why you watch **both** the total sign (regime) **and** where spot sits vs zero-gamma (local behavior). Flip every put sign to "+" (a wrong sign convention) and net GEX would read **+8.0M** — a totally different regime. **That's the sign-convention trap, quantified.**
 
 ## 4. The structural levels (what you actually trade off)
 From the per-strike net-GEX array (logic verbatim from zrack `engine.py`):

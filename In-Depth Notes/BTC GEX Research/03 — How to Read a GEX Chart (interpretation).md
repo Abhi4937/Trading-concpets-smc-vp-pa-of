@@ -9,6 +9,9 @@ status: usage-guide
 
 > Practical reading guide for the live dashboards. For each field: **where** it sits,
 > **what it means**, and **what a change in it means**. Ends with a full scenario matrix.
+>
+> 👉 For each scenario drawn as an **annotated chart with worked numbers**, see the companion
+> note [[09 — Worked Examples and Annotated Charts (all scenarios)]].
 
 ---
 
