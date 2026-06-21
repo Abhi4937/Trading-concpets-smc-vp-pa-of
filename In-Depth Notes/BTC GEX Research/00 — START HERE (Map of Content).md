@@ -31,11 +31,20 @@ status: living-document
 | 08 | [[08 — Pitfalls and Misconceptions (what NOT to do)]] | The traps that blow up GEX-based trades |
 | 09 | [[09 — Worked Examples and Annotated Charts (all scenarios)]] | Every definition as an annotated chart + numbers + the 10 scenarios walked end-to-end |
 
+### 🎯 Advanced — accuracy, positioning & extra data sources (added 2026-06-21)
+| # | Note | What you get |
+|---|------|--------------|
+| 10 | [[10 — Volume-Weighted GEX (VW-GEX)]] | Volume vs OI vs signed-volume weighting; VW-GEX formula + code; how to read & use it |
+| 11 | [[11 — Real-Time Dealer Positioning — CLOB Aggressor vs Block-OTC trades]] | What a CLOB is; on-book taker/aggressor flow vs block/OTC; live dealer-gamma reconstruction |
+| 12 | [[12 — CME Bitcoin Options & Futures as a GEX input]] | CME BTC futures/options, free vs paid data, Black-76 adjustments, combining CME + Deribit |
+| 13 | [[13 — Accurate DIY GEX — closing the gap to paid]] | The accuracy ladder, the error budget, free-data maximization, "close enough to speculate" verdict |
+
 ### 🔬 Per-tool deep-dives (`Tool Deep-Dives/`) — math, APIs, functions, end-to-end
 > The four hosted dashboards now include **annotated live-UI walkthroughs** (real screenshots captured 2026-06-20): every panel/chart explained — what it is, how to read it, the logic, assumptions, and limitations. Laevitas (4 charts), CryptoGamma (metrics + heatmap + vol/flow/risk), GammaFlip (marker taxonomy), GEX Terminal Pro (live terminal).
 - [[Tool Deep-Dives/CryptoGamma]] · [[Tool Deep-Dives/GammaFlip.io]] · [[Tool Deep-Dives/GEX Terminal Pro]] · [[Tool Deep-Dives/Laevitas]]
 - [[Tool Deep-Dives/Glassnode Gamma Exposure]] · [[Tool Deep-Dives/Amberdata AD Derivatives]]
 - [[Tool Deep-Dives/Nathan-Hall Bitcoin-Options-GEX]] · [[Tool Deep-Dives/dankbit]] · [[Tool Deep-Dives/zrack gex-terminal]]
+- [[Tool Deep-Dives/Coinglass]] — perps/futures positioning: liquidation & liquidity heatmaps (estimated, not actual), funding, OI, whale/large-order indicators, API, and peers (Coinalyze/Hyblock/Velo/CoinAnk)
 
 ---
 
@@ -62,3 +71,4 @@ status: living-document
 - Captured live on **2026-06-20** (BTC ~$63.3k at capture time on CryptoGamma).
 - Crypto dealer-sign conventions are **less reliable than equities** — there is no centralized OCC-style customer/dealer tagging. Most free tools use a *naive* `OI × Γ × sign` model. Only Amberdata claims *true* aggressor-based dealer positioning (vendor-asserted, not independently benchmarked).
 - Where a claim is vendor self-report or unverified, the note says so explicitly.
+- **2026-06-21 expansion (notes 10–13 + Coinglass):** added volume-weighted GEX, real-time CLOB/aggressor vs block/OTC positioning, CME as a data source, and a DIY-accuracy synthesis. **Material update to the 60-second summary above:** as of April 2026, US-listed **IBIT options OI (~$27.6B, vendor/aggregator-sourced) has reportedly surpassed Deribit (~$26.9B)** for the first time — so a *Deribit-only* model now sees well under half the BTC options market. Multi-venue aggregation (Deribit + CME + IBIT/Bybit/OKX) matters more than when this vault was first built. See [[13 — Accurate DIY GEX — closing the gap to paid]].
