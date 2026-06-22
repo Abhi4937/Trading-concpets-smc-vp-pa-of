@@ -97,6 +97,52 @@ const res = await fetch(
 - [nsepython](https://github.com/swapniljariwala/nsepython) (unofficial NSE scraper)
 - Chartink screener webhook (Pine-like conditions, 15-min delay, no code required)
 
+## Live Data (Dhan)
+
+The screener has an optional Express backend (`server/`) that pulls real-time data from the [DhanHQ v2 API](https://dhanhq.co/docs/v2/). When the backend is absent or has no token, the frontend shows sample data automatically — no configuration required just to run the UI.
+
+### Quick setup
+
+```bash
+# 1. Install new deps (express, cors, dotenv, concurrently)
+npm install
+
+# 2. Copy env template and fill in your credentials
+cp server/.env.example server/.env
+# Edit server/.env:
+#   DHAN_CLIENT_ID=<your client id>
+#   DHAN_ACCESS_TOKEN=<your access token>
+
+# 3. Run frontend + backend together
+npm run dev:all
+```
+
+Or in two terminals:
+```bash
+npm run dev      # terminal 1 — Vite frontend (http://localhost:5173)
+npm run server   # terminal 2 — Express backend (http://localhost:8787)
+```
+
+### Environment variables
+
+| Variable | Required | Description |
+|---|---|---|
+| `DHAN_ACCESS_TOKEN` | Yes (for live data) | JWT from Dhan dashboard (Profile → DhanHQ APIs) |
+| `DHAN_CLIENT_ID` | Recommended | Your Dhan client/user ID |
+| `PORT` | No (default 8787) | Port for the Express backend |
+| `VITE_API_BASE` | No (default http://localhost:8787) | Frontend env var pointing at the backend |
+
+Add `VITE_API_BASE` to a root `.env` file (e.g. `.env.local`) if you change the backend port.
+
+### How it falls back
+
+The header badge shows **LIVE** (green) or **SAMPLE DATA** (amber). Fallback triggers when:
+- `DHAN_ACCESS_TOKEN` is not set → backend returns 503
+- Backend is not running → frontend fetch times out (6 s)
+- Any Dhan API error (auth, subscription, rate limit) → backend returns 503
+
+For step-by-step Dhan account setup see **[DHAN_SETUP.md](./DHAN_SETUP.md)**.
+
 ## Stack
 
 - React 18.3 · Vite 5 · Tailwind CSS v4 (via `@tailwindcss/vite` plugin)

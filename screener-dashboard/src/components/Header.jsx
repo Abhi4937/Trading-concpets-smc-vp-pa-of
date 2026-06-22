@@ -26,10 +26,18 @@ function IndexChip({ name, value, change }) {
   );
 }
 
-export function Header({ onRefresh, isRefreshing, lastUpdated, watchlistCount, onWatchlistOpen }) {
+export function Header({ onRefresh, isRefreshing, lastUpdated, watchlistCount, onWatchlistOpen, dataSource = 'sample', asOf = null }) {
   const timeStr = lastUpdated
     ? lastUpdated.toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
     : '—';
+
+  // When live: show the ISO timestamp from the backend (server-side asOf),
+  // falling back to the client-side lastUpdated time.
+  const asOfStr = asOf
+    ? new Date(asOf).toLocaleTimeString('en-IN', { hour: '2-digit', minute: '2-digit', second: '2-digit' })
+    : timeStr;
+
+  const isLive = dataSource === 'live';
 
   return (
     <header style={{
@@ -63,22 +71,29 @@ export function Header({ onRefresh, isRefreshing, lastUpdated, watchlistCount, o
         <IndexChip name="INDIA VIX"  value={13.45}    change={-2.10} />
       </div>
 
-      {/* Sample badge */}
+      {/* Data source badge — green LIVE or amber SAMPLE DATA */}
       <span style={{
         display: 'inline-flex',
         alignItems: 'center',
+        gap: '5px',
         padding: '3px 9px',
-        background: 'rgba(245,158,11,0.15)',
-        border: '1px solid rgba(245,158,11,0.35)',
+        background: isLive ? 'rgba(34,197,94,0.12)'  : 'rgba(245,158,11,0.15)',
+        border:     isLive ? '1px solid rgba(34,197,94,0.35)' : '1px solid rgba(245,158,11,0.35)',
         borderRadius: '6px',
         fontSize: '10px',
         fontWeight: 700,
-        color: '#f59e0b',
+        color:    isLive ? '#22c55e' : '#f59e0b',
         letterSpacing: '0.06em',
         textTransform: 'uppercase',
         flexShrink: 0,
       }}>
-        Sample Data
+        {isLive ? (
+          <>
+            <span style={{ fontSize: '8px', lineHeight: 1 }}>●</span>
+            {'LIVE'}
+            <span style={{ fontWeight: 400, opacity: 0.8, letterSpacing: 0 }}>{asOfStr}</span>
+          </>
+        ) : 'SAMPLE DATA'}
       </span>
 
       {/* Spacer */}

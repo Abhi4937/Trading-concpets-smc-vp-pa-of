@@ -52,6 +52,8 @@ export default function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
+  const [dataSource, setDataSource] = useState('sample'); // 'live' | 'sample'
+  const [asOf, setAsOf] = useState(null);                 // ISO string from backend
 
   const [filters, setFilters] = useState(DEFAULT_FILTERS);
   const [sortConfig, setSortConfig] = useState({ key: 'strength', dir: 'desc' });
@@ -62,10 +64,14 @@ export default function App() {
 
   const load = useCallback(async () => {
     try {
+      // fetchScreenerData now returns { stocks, source, asOf } — never throws
       const data = await fetchScreenerData();
-      setAllStocks(data);
+      setAllStocks(data.stocks ?? []);
+      setDataSource(data.source ?? 'sample');
+      setAsOf(data.asOf ?? null);
       setLastUpdated(new Date());
     } catch (err) {
+      // Defensive: fetchScreenerData shouldn't throw, but guard anyway
       console.error('Screener fetch failed:', err);
     }
   }, []);
@@ -152,6 +158,8 @@ export default function App() {
         lastUpdated={lastUpdated}
         watchlistCount={watchlist.length}
         onWatchlistOpen={() => setWatchlistOpen(true)}
+        dataSource={dataSource}
+        asOf={asOf}
       />
 
       {/* Summary row */}
